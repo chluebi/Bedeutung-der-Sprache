@@ -31,7 +31,10 @@ Betreuung durch Christian Villiger}
 \tableofcontents{}
 
 
-\section{Später Wittgenstein}
+\section{Wittgensteins Sprachphilosophie}
+
+\subsection{Früher und Später Wittgenstein}
+
 Während des Ersten Weltkriegs schrieb Ludwig Wittgenstein sein erstes Hauptwerk: Die \enquote{Logisch-philosophische Abhandlung}, Englisch: \enquote{Tractatus logico-philosophicus} (TLP)\footnote{Wittgenstein 1921: 2} Hier werden allgemeine Sachverhalte (TLP: §2) als Konstrukte von Gegenständen (TLP: §2.1) bezeichnet. Die Sprache habe dann die Aufgabe diesen Gegenständen Namen zu geben (TLP: §3.22). Diese Philosophie wird als \enquote{früher Wittgenstein} bezeichnet. Der \enquote{späte Wittgenstein} widerspricht seinem Vorgänger explizit:
 \begin{displayquote}
 \enquote{[...] musste ich schwere Irrtümer in dem erkennen, was ich in jenem ersten Buche niedergelegt habe.}\footnote{Wittgenstein 1953: 4}
@@ -64,6 +67,8 @@ Satzarten, mit dem zu vergleichen, was Logiker über den Bau der
 Sprache gesagt haben. (Und auch der Verfasser der Logisch-Philosophischen Abhandlung. ) \textit{(sic!)}} (PU: §23)
 \end{displayquote}
 
+Man kann sich dies mit einer Analogie zum Fussball vorstellen: Es kann durch eine Reihe an Regeln definiert werden. z.B. Geht der Ball ins Tor, kriegt die andere Mannschaft einen Punkt, Stürmer dürfen den Ball nicht mit den Händen berühren etc. Das Spiel funktioniert nur solange beide Mannschaften sich an die gleichen Regeln halten. Doch warum genau diese Regeln? \\ Man man macht es eben so, es ist eine Gepflogenheit. Das bedeutet nicht, dass die Regeln nicht einen praktischen Wert haben, doch lassen sie sich nicht auf wenig Axiome hinunterbrechen oder Empirisch herleiten.
+
 
 \subsection{Privatsprachen}
 \blindtext[1]
@@ -72,11 +77,26 @@ Sprache gesagt haben. (Und auch der Verfasser der Logisch-Philosophischen Abhand
 \blindtext[1]
 
 
-\section{Compiler}
-\blindtext[1]
-
+\section{Programmiersprachen}
 \subsection{Die Turing Maschine}
-\blindtext[1]
+Die Turing Maschine ist eine theoretisches Konzept eines sehr einfachen Computers: Sie liest ein unendliches Band an leeren Quadraten ein (Input) und schreibt auf dieses eine gewisse Abfolge an Zeichen (Output).\footnote{Charles 2008: 79} Dies tut sie nach folgendem Prinzip: Sie besitzt verschiedene Konfigurationen $\alpha, \beta, \gamma, \delta$ etc. Jeder Zustand ist mindestens einer Instruktion so wie einem Endzustand verbunden. Jene Instruktionen ermöglichen die Interaktion mit dem leeren Band. 
+\begin{displayquote}
+\enquote{[...] \enquote{R} means \enquote{the machine moves
+so that it scans the square immediately on the right of the one it was
+scanning previously}. Similarly for \enquote{L}. \enquote{E} means \enquote{the scanned
+symbol is erased} and \enquote{P} stands for \enquote{prints}.}\footnote{Turing 1937: Sektion 3} \footnote{Deutsche Übersetzung: \enquote{R} bedeutet \enquote{die Maschine geht eins nach rechts und scannt das Quadrat rechts von welchen, welches gerade zuvor gescannt hat}. \enquote{L} funktioniert auf die gleiche Weise. \enquote{E} bedeutet \enquote{das gerade gescannte Symbol wird gelöscht} und \enquote{P} bedeutet \enquote{die Maschine schreibt das dazugegebene Symbol}}
+\end{displayquote}
+Jetzt braucht die Maschine noch eine Reihe an Regeln:\footnote{Turing 1937: Sektion 3, Ich habe das dort aufgezeigte Beispiel vereinfacht}
+\begin{itemize}
+    \item $\alpha$ bedeutet P0, dann R mit dem Endzustand $\beta$
+    \item $\beta$ bedeutet P1, dann R mit dem Endzustand $\alpha$
+\end{itemize}
+Beginnen wir nun mit dem Startzustand $\alpha$ wird das Programm die Abfolge $$01010101...$$ auf das Unendliche Band schreiben. Alan Turing, Erfinder der Turing Maschine, hat nun bewiesen, dass diese Art von Maschine jede berechenbare Abfolge aufschreiben kann.\footnote{Turing 1937: Sektion 2}
+
+\subsection{Compiler}
+Schlussendlich muss alles, was auf einem physischen Computer laufen soll, diesem in physikalischen Anweisungen gefüttert werden. Die Turing Maschine zeigt, wie solche Anweisungen aussehen, doch kann dies schnell mühsam bei komplexeren Programmen werden. Der Maschinencode, in welchen man nämlich schrieb, ist ein unleserlichen Fluss an Einsen und Nullen. Die Lösung: Der Compiler. \\
+Ein Compiler ist ein Computerprogramm, welches eine Sprache in eine andere übersetzt.\footnote{Aho 2007: 1} Die Grundidee dahinter ist die Folgende: Man gibt den Anweisungen im Binärcode klare Namen (e.g. \enquote{int} für eine Integerzahl) und lässt den Compiler dann die Übersetzungsarbeit leisten. So kann z.B. die Instruktion der Zahlenfolge $01010101...$ wie folgt umgeschrieben werden: 
+$$ while (True): print(0); print(1); $$
 
 \subsection{Die Programmiersprache C}
 \blindtext[1]
@@ -105,6 +125,9 @@ Sprache gesagt haben. (Und auch der Verfasser der Logisch-Philosophischen Abhand
 \blindtext[1]
 
 \section*{Literaturverzeichnis}
+\textbf{Turing, Alan (1937)}: \textit{On Computable Numbers, with an Application to the Entscheidungsproblem.} in: \textit{Proceedings of the London Mathematical Society. Band 42.} Cambridge: Cambridge University Press \\
+\textbf{Aho, Alfred V., Monica S. Lam, Ravi Sethi et al. (2007)}: \textit{Compilers: principles, techniques, \& tools.} Boston: Pearson Addison-Wesley \\
+\textbf{Petzold, Charles(2008)}: \textit{The Annotated Turing. A guided Tour through Alan Turing’s historic Paper on Computability and the Turing Machine.} Indianapolis: John Wiley \& Sons \\
 \textbf{Kripke, Saul A. (1982)}: \textit{Wittgenstein on rules and private language: An Elementary Exposition.} Cambridge: Havard University Press. Deutsch: Übersetzt von Helmut Pape (1987): \textit{Wittgenstein über Regeln und Privatsprache. Eine elementare Darstellung.} Frankfurt am Main: Suhrkamp \\
 \textbf{Newen, Albert und Markus A. Schrenk (2008)}: \textit{Einführung in die Sprachphilosophie.} Darmstadt: WBG \\
 \textbf{Selzer, Edgard (2011)}: \textit{Denn der Mensch ist mehr als nur ein Computer. Warum die Turing-Maschine das WITTGENSTEIN'sche Sprachspiel nicht bewältigen kann.} Wien: Trauner \\
