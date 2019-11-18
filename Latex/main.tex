@@ -25,6 +25,7 @@ Betreuung durch Christian Villiger}
 
 
 \section{Abstrakt}
+%Das Informationszeitalter hat dank des Computers unsere Gesellschaft umgewälzt. Es wird immer mehr automatisiert und informiert. Und im Kern des ganzen stehen die Programmiersprachen. Dieses neuartige Phänomen besitzt dabei gerade den Namen der Sprachen. Was hat es damit auf sich?
 \blindtext[1]
 
 
@@ -95,19 +96,39 @@ Beginnen wir nun mit dem Startzustand $\alpha$ wird das Programm die Abfolge $$0
 
 \subsection{Compiler}
 Schlussendlich muss alles, was auf einem physischen Computer laufen soll, diesem in physikalischen Anweisungen gefüttert werden. Die Turing Maschine zeigt, wie solche Anweisungen aussehen, doch kann dies schnell mühsam bei komplexeren Programmen werden. Der Maschinencode, in welchen man nämlich schrieb, ist ein unleserlichen Fluss an Einsen und Nullen. Die Lösung: Der Compiler. \\
-Ein Compiler ist ein Computerprogramm, welches eine Sprache in eine andere übersetzt.\footnote{Aho 2007: 1} Die Grundidee dahinter ist die Folgende: Man gibt den Anweisungen im Binärcode klare Namen (e.g. \enquote{int} für eine Integerzahl) und lässt den Compiler dann die Übersetzungsarbeit leisten. So kann z.B. die Instruktion der Zahlenfolge $01010101...$ wie folgt umgeschrieben werden: 
-$$ while (True): print(0); print(1); $$
+Ein Compiler ist ein Computerprogramm, welches eine Sprache in eine andere übersetzt.\footnote{Aho 2007: 1, Viele Definitionen engen das Ganze ein auf die Übersetzung einer Programmiersprache in Maschinencode, um Verwechslungen mit natürlichen Sprachen zu vermeiden. Doch gibt es auch Compiler, welche sich ausserhalb dieser vereinfachten Definition bewegen. (z.B. Stephens 2006, 26 zeigt einen Compiler, welcher von C++ zu C Code kompiliert und weltweit im Gebrauch ist.)} Die Grundidee dahinter ist die Folgende: Man gibt den Anweisungen im Binärcode klare Namen (e.g. \enquote{int} für eine Integerzahl) und lässt den Compiler diese in für den Computer lesbare Anwesiungen umschreiben. So kann z.B. die Instruktion der Zahlenfolge $01010101...$ wie folgt umgeschrieben werden: 
+$$ while (True) \{ print(0); print(1);\} $$
 
-\subsection{Die Programmiersprache C}
+\subsection{Moderne Programmiersprachen}
+Der Kern einer jeden modernen Programmiersprache ist ein solcher Compiler. So auch zum Beispiel \enquote{Python}\footnote{Python benutzt in Wirklichkeit einen \textit{Interpreter} doch sind diese beiden für unsere Zwecke funktionell identisch.} Ein wichtiger Teil von Programmiersprachen ist hierbei die Zugänglichkeit. Nicht nur kann jeder Python downloaden, sondern auch den Quellcode, also wie Python den Code in Anweisungen für den Computer übersetzt, sich anschauen. Wäre ich nun zum Beispiel darüber unglücklich, dass Pythons Funktion zur Ausgabe \enquote{print} heisst, könnte ich deren Namen im Quellcode zu \enquote{outprint} umbennenen. Ich habe gerade meine eigene Programmiersprache geschaffen und nenne sie z.B. \enquote{Pythan}. Wen ich wollte könnte ich diese nun veröffentlichen und verbreiten.
+
+
+
+\section{Vergleiche}
+\subsection{Computergespräche}
+Wenn wir uns einen Computer nun als Gesprächspartner vorstellen und wollten mit diesem sprechen, so müssten wir zuerst einmal eine Programmiersprache lernen. Genauso wie man wenn mit Annika, welche Italienisch, Deutsch und Englisch verstehen kann, sprechen will, einer ihrer Sprachen lernen muss. Also lerne ich zum Beispiel Python und teile dem Computer die Botschaft $print(2 + 5)$ mit. Ich habe nun, nach Wittgenstein die Bedeutung dieses Ausdrucks durch Beispiele im Gebrauch gelernt.  \\
+Wie findet der Computer nun aber heraus, was ich mit dieser Nachricht meine? Er benutzt seinen Compiler. Er übersetzt meine komplexe Aussage in simple Speichermanipulationen. Ist alles berechnet, so wird die Antwort $7$ gegeben. Habe ich gerade ein Gespräch mit meinem Computer geführt?
+
+\subsection{Zwei Konzepte der Bedeutung}
+Die grösste Hürde, die wir bei diesem Vergleich überwinden müssen, ist die Folgende: Ist das Verständnis des Computers über die Programmiersprache, vergleichbar mit dem menschlichen Verständnis einer menschlichen Sprache? Denn übersetzt der Computer mithilfe seines Compilers, während der Mensch, gemäss Wittgenstein, durch den Gebrauch die Bedeutung erkennt. So müssen wir diese beiden Konzepte, der Compiler und das menschliche Sprachverständnis, gleichsetzen.
+
+
+\section{Der humane Computer}
+\subsection{Der Turing Test}
+Der erste Ansatz hierbei, ist es auf eine Weise die Berechnungen des Computers auf das Niveau menschlicher Gedanken hochzuheben. Kann eine Maschine denn denken? Turing hat sich diese Frage auch selbst gestellt, doch war sich auch der Probleme dieser Fragestellung bewusst. Denn könne man die Begriffe \enquote{Maschine} und \enquote{denken} so umformulieren, dass man Maschinen auf ewig aus der Fähigkeit Gedanken zu besitzen ausschliesst.\\
+\\
+Als Alternative beschreibt er das heutzutage weltberühmte \enquote{Imitation Game}:
+Drei Personen in voneinander abgetrennten Räumen. Der Befrager (C) versucht herauszufinden wer ein Mann (X) und wer eine Frau (Y) ist. So müssen die beiden Spieler den Befrager davon überzeugen, dass sie X sind. Nach der Befragung muss C eine der folgenden Aussagen machen, entweder \enquote{A ist Y} oder \enquote{B ist Y}. Was passiert nun wenn man A mit einem Computer, X mit Maschine und Y mit Mensch ersetzt? Der Befrager muss nun Mensch und Maschine voneinander unterscheiden.\footnote{Turing 1950, 3.1} \\
+\\
+Wenn eine Maschine nun diesen Test besteht, schliesst Turing, kann die Maschine denken. Natürlich wäre das Sprachverständnis hier einbegriffen, was man an der Art des Testes klar erkennen kann. Die Aussage ist nun diese: Wenn Computer in der Lage sind menschliche Sprache auf dem gleichen Niveau wie Menschen verwenden können, ist ihr Verständnis davon auch das Gleiche. Und Dieses Verständnis wird schlussendlich auch von einem Computerprogramm gesteuert. Ist das dann ein Compiler für die menschliche Sprache? \\
+\\
+Also ist das Verarbeiten von Programmiersprachen auf Seiten eines Turing-Test-bestehenden Computers nicht davon zu unterscheiden von dem \enquote{Verständnis} einer natürlichen Sprache.
+
+\subsection{Einwände}
 \blindtext[1]
 
 
-\section{Mensch und Maschine}
-\blindtext[1]
-
-\subsection{Die chinesische Box}
-\blindtext[1]
-
+\section{Die menschliche Maschine}
 \subsection{Behaviorismus}
 \blindtext[1]
 
@@ -125,12 +146,16 @@ $$ while (True): print(0); print(1); $$
 \blindtext[1]
 
 \section*{Literaturverzeichnis}
-\textbf{Turing, Alan (1937)}: \textit{On Computable Numbers, with an Application to the Entscheidungsproblem.} in: \textit{Proceedings of the London Mathematical Society. Band 42.} Cambridge: Cambridge University Press \\
 \textbf{Aho, Alfred V., Monica S. Lam, Ravi Sethi et al. (2007)}: \textit{Compilers: principles, techniques, \& tools.} Boston: Pearson Addison-Wesley \\
-\textbf{Petzold, Charles(2008)}: \textit{The Annotated Turing. A guided Tour through Alan Turing’s historic Paper on Computability and the Turing Machine.} Indianapolis: John Wiley \& Sons \\
+\textbf{Epstein, Robert, Gary Roberts, Grace Beber (2008)}: \textit{Parsing the Turing Test. Philosophical and Methodological Issues in the Quest for the Thinking Computer.} New York City: Springer \\
 \textbf{Kripke, Saul A. (1982)}: \textit{Wittgenstein on rules and private language: An Elementary Exposition.} Cambridge: Havard University Press. Deutsch: Übersetzt von Helmut Pape (1987): \textit{Wittgenstein über Regeln und Privatsprache. Eine elementare Darstellung.} Frankfurt am Main: Suhrkamp \\
 \textbf{Newen, Albert und Markus A. Schrenk (2008)}: \textit{Einführung in die Sprachphilosophie.} Darmstadt: WBG \\
+\textbf{Petzold, Charles(2008)}: \textit{The Annotated Turing. A guided Tour through Alan Turing’s historic Paper on Computability and the Turing Machine.} Indianapolis: John Wiley \& Sons \\
+\textbf{Python Software Foundation (2019)}: \textit{Unter \enquote{Files} kann man den gesamten Quellcode downloaden.} https://www.python.org/downloads/release/python-380/ [16.11.2019] \\
 \textbf{Selzer, Edgard (2011)}: \textit{Denn der Mensch ist mehr als nur ein Computer. Warum die Turing-Maschine das WITTGENSTEIN'sche Sprachspiel nicht bewältigen kann.} Wien: Trauner \\
+\textbf{Stephens, D. Ryan, Christopher Diggins, Jonathan Turkanis et al. (2006)}: \textit{C++ Cookbook.} : Sebastopol: O'Reilly Media \\
+\textbf{Turing, Alan (1937)}: \textit{On Computable Numbers, with an Application to the Entscheidungsproblem.} in: \textit{Proceedings of the London Mathematical Society. Band 42.} Cambridge: Cambridge University Press \\
+\textbf{Turing, Alan (1950)}: \textit{Computing Machinery and Intelligence} in: \textit{Epstein, Robert, Gary Roberts, Grace Beber (2008): Parsing the Turing Test. Philosophical and Methodological Issues in the Quest for the Thinking Computer.} New York City: Springer \\
 \textbf{Wittgenstein, Ludwig (1921)}: \textit{Tractatus Logico-Philosophicus.} in: \textit{L. Wittgenstein (1984): Werkausgabe in 8 Bänden. Band 1.} Frankfurt am Main: Suhrkamp \\
 \textbf{Wittgenstein Ludwig (1953)}: \textit{Philosophische Untersuchungen.} in: \textit{L. Wittgenstein (1984): Werkausgabe in 8 Bänden. Band 1.} Frankfurt am Main: Suhrkamp \\
 \textbf{Wittgenstein Ludwig (1956)}: \textit{Bemerkungen über die Grundlagen der Mathematik.} in: \textit{L. Wittgenstein (1984): Werkausgabe in 8 Bänden. Band 6.} Frankfurt am Main: Suhrkamp \\
