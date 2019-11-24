@@ -67,7 +67,7 @@ Satzarten, mit dem zu vergleichen, was Logiker über den Bau der
 Sprache gesagt haben. (Und auch der Verfasser der Logisch-Philosophischen Abhandlung. ) \textit{(sic!)}} (PU: §23)
 \end{displayquote}
 
-Man kann sich dies mit einer Analogie zum Fussball vorstellen: Es kann durch eine Reihe an Regeln definiert werden. z.B. Geht der Ball ins Tor, kriegt die andere Mannschaft einen Punkt, Stürmer dürfen den Ball nicht mit den Händen berühren etc. Das Spiel funktioniert nur solange beide Mannschaften sich an die gleichen Regeln halten. Doch warum genau diese Regeln? \\ Man man macht es eben so, es ist eine Gepflogenheit. Das bedeutet nicht, dass die Regeln nicht einen praktischen Wert haben, doch lassen sie sich nicht auf wenig Axiome hinunterbrechen oder Empirisch herleiten.
+Man kann sich dies mit einer Analogie zum Fussball vorstellen: Es kann durch eine Reihe an Regeln definiert werden. z.B. Geht der Ball ins Tor, kriegt die andere Mannschaft einen Punkt, Stürmer dürfen den Ball nicht mit den Händen berühren etc. Das Spiel funktioniert nur solange beide Mannschaften sich an die gleichen Regeln halten. Doch warum genau diese Regeln? \\ Man man macht es eben so, es ist eine Gepflogenheit. Das bedeutet nicht, dass die Regeln nicht einen praktischen Wert haben, doch lassen sie sich nicht auf wenig Axiome\footnote{Als Axiom bezeichne ich hier eine grundlegende Regel oder Logik, wie etwas aufgebaut ist. z.B. besitzt die Mathematik eine Vielzahl von Axiomen, von welcher all die anderen Regeln abgeleitet werden.} hinunterbrechen oder Empirisch herleiten.
 
 
 
@@ -97,7 +97,7 @@ Der Kern einer jeden modernen Programmiersprache ist ein solcher Compiler. So au
 
 
 
-\section{Vergleiche}
+\section{Gedanken über den fundamentalen Aufbau von Programmiersprachen und natürlichen Sprachen}
 \subsection{Computergespräche}
 Wenn wir uns einen Computer nun als Gesprächspartner vorstellen und wollten mit diesem sprechen, so müssten wir zuerst einmal eine Programmiersprache lernen. Genauso wie man wenn mit Annika, welche Italienisch, Deutsch und Englisch verstehen kann, sprechen will, einer ihrer Sprachen lernen muss. Also lerne ich zum Beispiel Python und teile dem Computer die Botschaft $print(2 + 5)$ mit. Ich habe nun, nach Wittgenstein die Bedeutung dieses Ausdrucks durch Beispiele im Gebrauch gelernt.  \\
 Wie findet der Computer nun aber heraus, was ich mit dieser Nachricht meine? Er benutzt seinen Compiler. Er übersetzt meine komplexe Aussage in simple Speichermanipulationen. Ist alles berechnet, so wird die Antwort $7$ gegeben. Habe ich gerade ein Gespräch mit meinem Computer geführt?
@@ -105,11 +105,9 @@ Wie findet der Computer nun aber heraus, was ich mit dieser Nachricht meine? Er 
 \subsection{Zwei Konzepte der Bedeutung}
 Die grösste Hürde, die wir bei diesem Vergleich überwinden müssen, ist die Folgende: Ist das Verständnis des Computers über die Programmiersprache, vergleichbar mit dem menschlichen Verständnis einer menschlichen Sprache? Denn übersetzt der Computer mithilfe seines Compilers, während der Mensch, gemäss Wittgenstein, durch den Gebrauch die Bedeutung erkennt. So müssen wir diese beiden Konzepte, der Compiler und das menschliche Sprachverständnis, gleichsetzen.
 
-
-\section{Versuche die Verarbeitung von natürlichen Sprachen mit derjenigen von Programmiersprachen gleichzusetzen}
 \subsection{Wie ein Computer eine natürliche Sprache verstehen kann}
 \subsubsection{Der Turing Test}
-Der erste Ansatz hierbei, ist es auf eine Weise die Berechnungen des Computers auf das Niveau menschlicher Gedanken hochzuheben. Kann eine Maschine denn denken? Turing hat sich diese Frage auch selbst gestellt, doch war sich auch der Probleme dieser Fragestellung bewusst. Denn könne man die Begriffe \enquote{Maschine} und \enquote{denken} so umformulieren, dass man Maschinen auf ewig aus der Fähigkeit Gedanken zu besitzen ausschliesst.\\
+Ein möglicher Ansatz ist es, auf eine Weise die Berechnungen des Computers auf das Niveau menschlicher Gedanken hochzuheben. Kann eine Maschine denn denken? Turing hat sich diese Frage auch selbst gestellt, doch war sich auch der Probleme dieser Fragestellung bewusst. Denn könne man die Begriffe \enquote{Maschine} und \enquote{denken} so umformulieren, dass man Maschinen auf ewig aus der Fähigkeit Gedanken zu besitzen ausschliesst.\\
 \\
 Als Alternative beschreibt er das heutzutage weltberühmte \enquote{Imitation Game}:
 Drei Personen in voneinander abgetrennten Räumen. Der Befrager (C) versucht herauszufinden wer ein Mann (X) und wer eine Frau (Y) ist. So müssen die beiden Spieler den Befrager davon überzeugen, dass sie X sind. Nach der Befragung muss C eine der folgenden Aussagen machen, entweder \enquote{A ist Y} oder \enquote{B ist Y}. Was passiert nun wenn man A mit einem Computer, X mit Maschine und Y mit Mensch ersetzt? Der Befrager muss nun Mensch und Maschine voneinander unterscheiden.\footnote{Turing 1950, 3.1} \\
@@ -129,12 +127,12 @@ Jetzt stellen wir uns eine (künstliche) Programmiersprache als neue Stadt vor. 
 
 \subsubsection{Das Sprachverständnis heutiger Programme}
 Diese Aussagen bewegen sich natürlich noch in einem hypothetischem Raum. Gibt es ein Computerprogramm, welches den Turing Test besteht? Der Chatting-Bot Cleverbot soll in der Lage sein menschliche Konversationen zu halten. So wurde er zu 59.3\% als Mensch eingestuft. Seine menschlichen Gegenstücke schafften 63.3 \%.\footnote{Cleverbot 2019}. Ein neueres Beispiel wäre das Sprachmodell GPT-2. Konzipiert um die menschliche Sprache zu verstehen, ist es eines der besten Kandidaten ein \enquote{humanes Programm} genannt zu werden.\footnote{Radford 2019, §3, ob GPT-2 wirklich einen Turing-Test bestehen könnte ist schwer zu beantworten, denn wurde es nicht zur Konversation konzipiert. Es erbrachte jedoch ausserordentliche Ergebnisse in einer Bandbreite an standardisierten Messmethoden.} \\
-Was ist das Geheimnis dieser Wundermaschinen? Wie beherrschen sie komplexe Grammatik? Cleverbot als auch GPT-2 setzen dabei auf Imitation. Cleverbot sucht dabei durch seinen Katalog an menschlichen Antworten. Frage ich es zum Beispiel \enquote{Was ist die Hauptstadt von Frankreich?} wird Cleverbot eine Antwort geben, welche es selbst von einem vorherigen Konversationspartner bekommen hat.\footnote{Aron 2011} GPT-2 benutzt hierbei ein fortgeschritteneres System: Ein sogennantes \enquote{Transformer} Neural Network.\footnote{Radford 2019, Abstract}. Das ganze basiert auf einem Selbstlernenden Algorhitmus\footnote{Extreme Vereinfachung}, welchen man mit Sprachmaterial füttert. Dieses bestand aus 40 Gigabyte an extrahiertem Text aus Websiten.\footnote{Radford 2019, §2.1} Was wird also gelernt um die Bedeutung zu verstehen? Der Gebrauch.
+Was ist das Geheimnis dieser Wundermaschinen? Wie beherrschen sie komplexe Grammatik? Cleverbot als auch GPT-2 setzen dabei auf Imitation. Cleverbot sucht durch seinen Katalog an menschlichen Antworten. Frage ich es zum Beispiel \enquote{Was ist die Hauptstadt von Frankreich?} wird Cleverbot eine Antwort geben, welche es selbst von einem vorherigen Konversationspartner bekommen hat.\footnote{Aron 2011} GPT-2 benutzt hierbei ein fortgeschritteneres System: Ein sogennantes \enquote{Transformer} Neural Network.\footnote{Radford 2019, Abstract}. Das ganze basiert auf einem Selbstlernenden Algorhitmus\footnote{Extreme Vereinfachung}, welchen man mit Sprachmaterial füttert. Dieses bestand aus 40 Gigabyte an extrahiertem Text aus Websiten.\footnote{Radford 2019, §2.1} Was wird also gelernt um die Bedeutung zu verstehen? Der Gebrauch.
 
 \subsubsection{Übereinstimmung mit Wittgenstein}
 Gibt es einen Compiler für die menschliche Sprache, so ist der Turing Test ein guter Ansatz für dessen Bewertung. Die fortgeschrittensten Programme in der Sprachimitation, basieren hierbei jedoch nicht auf einer feste Logik, sondern lernen durch Beispiele im Gebrauch der verschiedenen Worte. Das stimmt nahezu perfekt mit Wittgensteins Aussage über Bedeutung der Sprache überein. \\
 
-\subsection{Kritikpunkte}
+\subsection{Kritik am Sprachverständnis von Computer}
 \subsubsection{Die Erfindung des Turing Test}
 \begin{displayquote}
 \enquote{At the very dawn of the computer age, Alan Turing confronted a cacophony of
@@ -147,20 +145,53 @@ pass this test would be a thinker for sure, wouldn’t it?}\footnote{Epstein 200
 Die allgemeine Gültigkeit des Turing Tests ist umstrittener denn  je. Er wurde eingeführt, als die Computerwissenschaft noch in ihren Babyjahren war. Ob dieser denn in unserer heutigen Welt der KI noch zu gebrauchen sei. So habe Turing gar das Denken von Maschinen \enquote{im menschlichen Sinne} ausgeschlossen, sondern nur die Möglichkeit einer Maschine ein Gespräch zu führen beschrieben.\footnote{Selzer, 2011, 3} \\
 So war seine Aussage nie eine wissenschaftliche These sondern nur eine subjektive Aussage.
 
-\subsubsection{Der chinesische Raum}
-Zwar scheint die Art wie Programme lernen Wittgensteins Sprachphilosophie zu reflektieren, odch schlussendlich werden all diese Beispiele auf eine Logik hinunter gebrochen, sonst könne ein Computer diese gar nicht speichern und ausführen. Wenn wir uns zurück zur Turing-Maschine entsinnen, so sieht man, dass alles was ein Computer tut irgendwann als einfache Speichermanipulation dasteht. So gibt es eine Speichermanipulation die z.B. genau mit dem Ausdruck \enquote{Was ist die Definition von Ehre?} übereinstimmt. Ist die menschliche Sprache also doch zu Axiomisieren? \\
+\subsubsection{Die chinesische Box}
+Zwar scheint die Art wie Programme lernen Wittgensteins Sprachphilosophie zu reflektieren, odch schlussendlich werden all diese Beispiele auf eine Logik hinunter gebrochen, sonst könne ein Computer diese gar nicht speichern und ausführen. Wenn wir uns zurück zur Turing-Maschine entsinnen, so sieht man, dass alles was ein Computer tut irgendwann als einfache Speichermanipulation dasteht. So gibt es eine Speichermanipulation die z.B. genau mit dem Ausdruck \enquote{Was ist die Definition von Ehre?} übereinstimmt. Ist es also doch möglich die menschliche Sprache in simple Axiome hinunterzubrechen? \\
 Man stelle sich eine kleine Box mit einem Menschen vor. Dieser erhält von Wissenschaftlern von aussen zwei Blätter Papier. Auf dem ersten stehen mehrere Fragen auf chinesisch (Input). Die Person kann hierbei kein chinesisch und ist somit nicht in der Lage die Fragen zu beanworten. Auf dem zweiten Papier steht nun eine Anleitung: So hat die Person für jede Kombination an Schriftzeichen eine genaue Antwort, die sie geben soll.\footnote{Searle 1980: 3, leicht abgeändert} Nennen wir dieses Blatt Papier \enquote{den Compiler für Chinesisch}. Mit der Anleiung schreibt die Person nun ihre Antworten auf ein seperates Blatt Papier und reicht dieses zurück nach aussen (Output). Die Wissenschaftler wären begeistert, so sind sie sich sicher, dass die Person in der Box nun Chinesisch kann. So seien die Antworten verglichen mit muttersprachigen Chinesen nicht zu unterscheiden. \\
-Natürlich würde aber jeder sagen, dass die Person in der Box einfach nur die Schriftzeichen auf der Anleitung kopiert, aber gar kein Verständnis für die Sprache hat. Diese Antwort ändert sich nicht, egal wie komplex die Anleitung ist und für wie viele spezifische Fälle eingeplant worden ist. Also gibt es, solange man diesem Gedankenexperiment folgt, keinen \enquote{Compiler für Chinesisch} so ist jedes Folgen strikter Logik kein wirkliches Verstehen. Nicht nur behält Wittgenstein Recht, sondern \enquote{verstehen} die derzeitigen Programme (Cleverbot und GPT-2) natürliche Sprachen im menschlichen Sinne gar nicht.
+Natürlich würde aber jeder sagen, dass die Person in der Box einfach nur die Schriftzeichen auf der Anleitung kopiert, aber gar kein Verständnis für die Sprache hat. Diese Antwort ändert sich nicht, egal wie komplex die Anleitung ist und für wie viele spezifische Fälle eingeplant worden ist. Also gibt es, solange man diesem Gedankenexperiment folgt, keinen \enquote{Compiler für Chinesisch} so ist jedes Folgen strikter Logik kein wirkliches Verstehen. Nicht nur behält Wittgenstein Recht, sondern \enquote{verstehen} die derzeitigen Programme (Cleverbot und GPT-2) natürliche Sprachen im menschlichen Sinne gar nicht. Zerfällt hier nicht der Vergleich zwischen natürlicher Sprache und Programmiersprache, so ist eine Programmiersprache immer durch ein Compiler definiert?
 
+\subsection{Die menschliche Maschine}
+\subsubsection{Einführung in Behaviorismus}
+Die Frage wie und ob Menschen überhaupt denken ist eine umstrittene in der Philosophie. \enquote{Behaviorismus} bezieht in dieser Debatte die folgende Position:
+\begin{displayquote}
+\enquote{What it is to be in a certain state of mind is to be disposed to behave in
+a certain way.}\footnote{Stout (2006), 3} \footnote{Deutsche Übersetzung: Einen gewissen Gemütszustand zu verspüren ist nichts anderes, als auf eine gewisse Weise zu handeln.} \footnote{Es gibt verschiedene Versionen des Behaviorismus, genau wie es verschiedene Arten des Skeptizismus gibt. Ich beziehe mich hier auf eine neuere akademische Version (siehe Quelle).}
+\end{displayquote}
+Vertreter von Behaviorismus denken also, dass Gemütszustände auf gar keine andere Weise existieren, als was sie den Organismus dazu bringen zu tun.\footnote{Stout (2006), 3} Das bedeutet aber nicht, dass Behavioristen innere Vorgänge vollkommen abstreiten. So stimmen sie zu, dass ein Mensch durch die inneren chemischen Reaktionen zwischen Neuronen gesteuert wird. \footnote{Stout (2006), 4}\\
+Würde man nun aber einen Roboter R bauen, welcher exakt dieselbe Reaktion auf jeglichen Reiz wie Person P hat, so würde ein Behaviorist aussagen, dass Roboter R und Mensch P den exakt selben Gemütszustand besitzen. Der Fakt, dass Roboter R durch einen hochkomplexen Algorithmus und Person P durch ihr Hirn gesteuert wurden, wird also irrelevant.
 
-\section{Die menschliche Maschine}
-\subsection{Behaviorismus}
-Wenn die natürliche Sprache, also durch einen ausgeklügelten Compiler definiert werden kann
+\subsubsection{Gegenüberstellung von Behaviorismus und der chinesischen Box}
+Bezieht man nun einen behavioristischen Blickwinkel auf das Gedankenexperiment auf die chinesische Box, verändern sich gewisse Dinge fundamental. Wir stellen zwei chinesische Boxen nebeneinander: Eine davon enthält einen Muttersprachler M, in der anderen befindet sich K, der kein Chinesisch versteht. Nun werden beiden die gleichen Fragen auf Chinesisch gestellt. So geben nun beide auf jegliche mögliche Frage die exakt selbe Antwort. Für den Behavioristen würde es keine Rolle spielen, dass Person M die chinesische Sprache M versteht, während K nur einer Anleitung folgt. Beide Boxen hätten denselben Gemütszustand.
 
-\section{Programmiersprachen: Strikt oder Flexibel?}
+\subsubsection{Regeln für das Gehirn}
+Man kann das Hirn eines Muttersprachlers selbst als eine chinesische Box sehen. Die \enquote{Fragen}, die man dem Gehirn stellt, wären dabei einfach die verschiedenen Reize aus der Umwelt. Und die \enquote{Antworten} des Hirnes sind die verschiedenen Nervensignale, welches an die Muskeln im Körper sendet. In diesem Gehirn muss sich irgendwo das Sprachverständnis für Chinesisch verstecken. \\
+Ein Behaviorist würde nun sagen, dass es in dem Hirn eine gewisse Anordnung von Teilchen gibt, welche auf das Hören einer Frage eine physikalische Reaktion auslöst, deren Endeffekt die Antwort auf die Frage ist. Diese Anordnung von Teilchen kann man funktional als den \enquote{Compiler für Chinesisch} verstehen. Also ist das Herunterbrechen der natürlichen Sprache in Grundregeln doch möglich, denn muss ihr Zustand ja irgendwie in dieser Anordnung von Teilchen gespeichert sein.
+
+\subsection{Kritik an der behavioristischen Ansicht}
 \blindtext[1]
 
-\subsection{Ein Blick in die Zukunft: Natürliche Sprachen als Programmiersprachen}
+\section{Gedanken über den Gebrauch und Möglichkeiten von Programmiersprachen und natürlichen Sprachen}
+
+\subsection{Die Flexibilität von Programmiersprachen}
+\subsubsection{Das Definieren von neuen Funktionen}
+Fast jede Programmiersprache bietet die Möglichkeit neue Funktionen zu definieren. Diese sind sozusagen Kurzfassungen komplizierter Operationen. Vergleichbar ist das mit mathematischen Funktionen: So ist zum Beispiel die Funktion $f(x) = \frac{(x^2 + 2)}{x}$ eine Kurzfassung mehrerer Operationen hintereinander. Will ich diese Funktion zum Beispiel in einer Rechnung mehrmals anwenden, so kann ich einfach $f(2) + f(3) - f(4)$ schreiben. \\
+Die Gemeinsamkeiten mit einem Compiler sind nicht zu übersehen. Doch muss man hier klar unterscheiden: Ein Compiler übersetzt von einer Sprache in eine andere, eine Funktion übersetzt von einer Sprache in dieselbe. Ich kann meine Rechnung genauso gut als $\frac{(2^2 + 2)}{2} + \frac{(3^2 + 2)}{3} - \frac{(4^2 + 2)}{4}$ schreiben. So muss ich aber viel Information mehrmals hinschreiben, weshalb man eben diese Kurzfassung definiert. \\
+Die Parallele zu einer Funktion ist ein neues Wort. Halte ich zum Beispiel ein Referat über eine neu-gefundene Krankheit, erkläre ich deren Namen als \enquote{Entquillis}. Erwähne ich den Namen \enquote{Entquillis} in einem anderen Kontext, so können sich die Zuschauer \enquote{die neu-gefundene Krankheit} denken und ich muss mich nicht jedes Mal wiederholen. \\
+
+\subsubsection{Libraries und Sprachspiele}
+Viele Programmiersprachen bündeln mehrere Funktionen zusammen. Dies ist eine sogennante \enquote{Library}.\footnote{Deutsch: Bibliothek, der deutsche Begriff ist jedoch kaum in Gebrauch, weshalb ich \enquote{Library} verwende}. Python kommt mit einer Vielzahl an eingebauter Libraries, eine davon ist die sogennante \enquote{Math}. Math ist auf mathematische Operationen spezialisiert. Will ich also zum Beispiel die Quadratwurzel einer Zahl, schreibe ich folgendes:
+$$import \hspace{1mm} math$$
+$$math.sqrt(36)$$
+Die erste Linie erklärt dem Compiler, dass ich die Math Library verwenden will. Es ist sozusagen ein \enquote{Ich will über Mathematik sprechen}. \\
+Die Zweite Linie wendet die Funktion an. \enquote{In der Mathematik nimm die Quadratwurzel der Zahl 36.} \\
+Jetzt sieht man wie die Math Library mit dem Sprachspiel nach Wittgenstein übereinstimmt.
+
+\subsubsection{Was war zuerst, die Definition oder der Gebrauch?}
+Die Übereinstimmung ist jedoch nur bedingt: Denn ist für Wittgenstein ein Sprachspiel durch den Gebrauch definiert, während die Libraries ihre Funktionen unabhängig von deren Gebrauch besitzen. Oder zumindest scheinen sie unabhängig vom Gebrauch, bis man bedenkt, dass eine Funktion noch immer von einer Person geschrieben werden muss. Diese Person will die Funktion für ein Kurzfassung verschiedener Rechnungschritte \textbf{gebrauch}en. Ohne die Absicht des Gebrauches ist eine Funktion nutzlos. \\
+\\
+Libraries sind oft nicht eine private Sache.\footnote{Eine Diskussion privater Libraries und Wittgensteins Diskussion über Privatsprachen wäre hier möglich.} Die Math Library ist weltweit im Gebrauch, denn ist sie als eingebaute Library in jeder Version von Python inbegriffen.
+
+\section{Ein Blick in die Zukunft: Natürliche Sprachen als Programmiersprachen}
 \blindtext[1]
 
 
@@ -180,6 +211,7 @@ Wenn die natürliche Sprache, also durch einen ausgeklügelten Compiler definier
 \textbf{Radford, Alec; Jeffrey Wu; Rewon Child et al. (2019)} \textit{Language Models are Unsupervised Multitask Learners} Verfügbar unter: \\ https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf [21.11.2019] \\
 \textbf{Selzer, Edgard (2011)}: \textit{Denn der Mensch ist mehr als nur ein Computer. Warum die Turing-Maschine das WITTGENSTEIN'sche Sprachspiel nicht bewältigen kann.} Wien: Trauner \\
 \textbf{Stephens, D. Ryan; Christopher Diggins; Jonathan Turkanis et al. (2006)}: \textit{C++ Cookbook.} : Sebastopol: O'Reilly Media \\
+\textbf{Stout, Rowland (2006)}: \textit{The Inner Life of a Rational Agent. In Defence of Philosophical Behaviourism.} Edinburgh: Edinburgh University Press Ltd \\
 \textbf{Turing, Alan (1937)}: \textit{On Computable Numbers, with an Application to the Entscheidungsproblem.} in: \textit{Proceedings of the London Mathematical Society. Band 42.} Cambridge: Cambridge University Press \\
 \textbf{Turing, Alan (1950)}: \textit{Computing Machinery and Intelligence} in: \textit{Epstein, Robert; Gary Roberts; Grace Beber (2008): Parsing the Turing Test. Philosophical and Methodological Issues in the Quest for the Thinking Computer.} New York City: Springer \\
 \textbf{Wittgenstein, Ludwig (1921)}: \textit{Tractatus Logico-Philosophicus.} in: \textit{L. Wittgenstein (1984): Werkausgabe in 8 Bänden. Band 1.} Frankfurt am Main: Suhrkamp \\
