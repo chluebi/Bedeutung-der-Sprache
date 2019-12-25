@@ -19,7 +19,7 @@ Weinbergstrasse 105 \\
 lu.maltsis@gmail.com \\
 \textit{Eingereicht beim MNG, Rämibühl}
 }
-\date{Eingereicht am xx.xx.xxxx \\
+\date{Eingereicht am 07.01.2020 \\
 \vspace{10mm}
 Betreuung durch Christian Villiger}
 \maketitle
@@ -90,7 +90,7 @@ so that it scans the square immediately on the right of the one it was
 scanning previously}. Similarly for \enquote{L}. \enquote{E} means \enquote{the scanned
 symbol is erased} and \enquote{P} stands for \enquote{prints}.}\footnote{Turing 1937: Sektion 3} \footnote{Deutsche Übersetzung: \enquote{R} bedeutet \enquote{die Maschine geht eins nach rechts und scannt das Quadrat rechts von welchen, welches gerade zuvor gescannt hat}. \enquote{L} funktioniert auf die gleiche Weise. \enquote{E} bedeutet \enquote{das gerade gescannte Symbol wird gelöscht} und \enquote{P} bedeutet \enquote{die Maschine schreibt das dazugegebene Symbol}}
 \end{displayquote}
-Jetzt braucht die Maschine noch eine Reihe an Regeln:\footnote{Turing 1937: Sektion 3, Ich habe das dort aufgezeigte Beispiel vereinfacht}
+Auch braucht die Maschine noch eine Reihe an Regeln:\footnote{Turing 1937: Sektion 3, Ich habe das dort aufgezeigte Beispiel vereinfacht}
 \begin{itemize}
     \item $\alpha$ bedeutet P0, dann R mit dem Endzustand $\beta$
     \item $\beta$ bedeutet P1, dann R mit dem Endzustand $\alpha$
@@ -103,9 +103,8 @@ Ein Compiler ist ein Computerprogramm, welches eine Sprache in eine andere über
 $$ while (True) \{ print(0); print(1);\} $$
 
 \subsection{Moderne Programmiersprachen}
-Der Kern einer jeden modernen Programmiersprache ist ein solcher Compiler. So auch zum Beispiel \enquote{Python}\footnote{Python benutzt in Wirklichkeit einen \textit{Interpreter} doch sind diese beiden für unsere Zwecke funktionell identisch.} Python wird in dieser Facharbeit als konkretes Beispiel genannt, doch, was für Python gilt, gilt für einen Grossteil aller Programmiersprachen.\\
-Ein wichtiger Teil von Programmiersprachen ist hierbei die Zugänglichkeit. Nicht nur kann jeder Python downloaden, sondern auch den Quellcode, also wie Python den Code in Anweisungen für den Computer übersetzt, sich anschauen.\footnote{Python Software Foundation 2019a} Wäre ich zum Beispiel darüber unglücklich, dass Pythons Funktion zur Ausgabe \enquote{print} heisst, könnte ich deren Namen im Quellcode zu \enquote{outprint} umbennenen. Ich habe gerade meine eigene Programmiersprache geschaffen und nenne sie z.B. \enquote{Pythan}. Wen ich wollte könnte ich diese veröffentlichen und verbreiten.
-
+Der Kern einer jeden modernen Programmiersprache ist ein solcher Compiler. So auch zum Beispiel \enquote{Python}\footnote{Python benutzt in Wirklichkeit einen \textit{Interpreter} doch sind diese beiden für unsere Zwecke funktionell identisch.}, welche in dieser Facharbeit als konkretes Beispiel verwendet wird, doch, was für Python gilt, gilt für einen Grossteil aller Programmiersprachen.\\
+Moderne Programmiersprachen sind meist weit entfernt von den physikalischen Vorgängen auf dem Prozessor. Denn wurden sie, um ihren Gebrauch zu erleichtern, so konzipiert, dass sie natürlichen Sprachen\footnote{zumeist Englisch} ähneln.\footnote{Programmiersprachen mit hoher Abstraktion dieser Art werden \enquote{high-level} gennant.} Aber trotz dieser ästhetischen Erscheinung werden dank dem Compiler alle Anweisung auf das Prinzip der Turing Maschine hinuntergebrochen.
 
 
 \section{Eine Definition durch Sprachverständnis}
@@ -179,6 +178,9 @@ Fast jede Programmiersprache bietet die Möglichkeit neue Funktionen zu definier
 Die Gemeinsamkeiten mit einem Compiler sind nicht zu übersehen. Doch muss man hier klar unterscheiden: Ein Compiler übersetzt von einer Sprache in eine andere, eine Funktion übersetzt von einer Sprache in dieselbe. Ich kann meine Rechnung genauso gut als $\frac{(2^2 + 2)}{2} + \frac{(3^2 + 2)}{3} - \frac{(4^2 + 2)}{4}$ schreiben. So muss ich aber viel Information mehrmals hinschreiben, weshalb man eben diese Kurzfassung definiert. \\
 Die Parallele zu einer Funktion ist ein neues Wort. Halte ich zum Beispiel ein Referat über eine neu-gefundene Krankheit, erkläre ich deren Namen als \enquote{Entquillis}. Erwähne ich den Namen \enquote{Entquillis} in einem anderen Kontext, so können sich die Zuschauer \enquote{die neu-gefundene Krankheit} denken und ich muss mich nicht jedes Mal wiederholen. \\
 
+\subsubsection{Das Definieren von neuen Programmiersprachen}
+Ein wichtiger Teil von Programmiersprachen ist hierbei die Zugänglichkeit. Nicht nur kann jeder Python herunterladen, sondern auch den Quellcode, also wie Python den Code in Anweisungen für den Computer übersetzt, sich anschauen.\footnote{Python Software Foundation 2019a} Wäre ich zum Beispiel darüber unglücklich, dass Pythons Funktion zur Ausgabe \enquote{print} heisst, könnte ich deren Namen im Quellcode zu \enquote{outprint} umbennenen. Ich habe gerade meine eigene Programmiersprache geschaffen und nenne sie z.B. \enquote{Pythan}. Wen ich wollte könnte ich diese veröffentlichen und verbreiten.
+
 \subsubsection{Libraries und Sprachspiele}
 Viele Programmiersprachen bündeln mehrere Funktionen zusammen. Dies ist eine sogennante \enquote{Library}.\footnote{Deutsch: Bibliothek, der deutsche Begriff ist jedoch kaum in Gebrauch, weshalb ich \enquote{Library} verwende}. Python kommt mit einer Vielzahl an eingebauter Libraries, eine davon ist die sogennante \enquote{Math}. Math ist auf mathematische Operationen spezialisiert. Will ich also zum Beispiel die Quadratwurzel einer Zahl, schreibe ich folgendes:
 $$import \hspace{1mm} math$$
@@ -209,7 +211,7 @@ Programmiersprachen sind künstliche Sprache. Das bedeutet, dass die Sprachen ge
 Ich habe diese Vorstellung der vollkommen strikten Programmiersprache im vorherigen Unterkapitel schon angefochten. Nun will ich auch diese Zweiteilung der künstlichen und natürlichen Sprachen differenziert betrachten.
 
 \subsubsection{Das natürliche Wachstum von Programmiersprachen am Beispiel von Python}
-Pythons neuste Version ist derzeit 3.8.0\footnote{14.12.2019}. Es ist eine relativ neue Programmiersprache, aber trotzdem erlebte es schon mehrere Wachstumsperioden.\footnote{Wikipedia 2019, die meisten Veränderungen sind leider zu technisch, um sie hier zufriedenstellend zu besprechen} Seit seiner ersten Version 1989 hat es riesige Veränderungen durchgemacht, wie z.B. eine komplette Umwälzung der Sprache von Version 2 zu Version 3. Wie in 4.3.4 besprochen ist die Grundlage dieser Veränderungen meist nicht eine logische Konsequenz sondern ein Druck von aussen. \\
+Pythons neuste Version ist derzeit 3.8.0\footnote{14.12.2019}. Es ist eine relativ neue Programmiersprache, aber trotzdem erlebte es schon mehrere Wachstumsperioden.\footnote{Wikipedia 2019, die meisten Veränderungen sind leider zu technisch, um sie hier zufriedenstellend zu besprechen} Seit seiner ersten Version 1989 hat es riesige Veränderungen durchgemacht, wie z.B. eine komplette Umwälzung der Sprache von Version 2 zu Version 3. Wie in 4.3.5 besprochen ist die Grundlage dieser Veränderungen meist nicht eine logische Konsequenz sondern ein Druck von aussen. \\
 Vergleicht man diese immensen Änderungen in einem so kurzen Zeitraum könnte man sogar rückschliessen, dass gewisse Programmiersprachen in ihrem Wachstum lebendiger sind als natürliche Sprachen. Diese Schlussfolgerung hat natürlich gewisse Schwierigkeiten, wie z.B. die Extrapolation, dass das Wachstum einer Sprache konstant ist. Was aber mit Sicherheit feststellen kann, ist, dass Programmiersprachen alles andere als starr in ihrer Entwicklung sind.
 
 \subsubsection{Künstliche Natürliche Sprachen am Beispiel von Nynorsk}
@@ -243,14 +245,11 @@ Warum Programmiersprachen den Begriff \enquote{Sprache} trotz der vielen Diskrep
 
 \section{Konklusion}
 Sprache hat eine ausserordentlich komplexe Struktur. Ob eine Sache X zum Begriff A hinzuzählt ist nur mit einer klaren Definiton möglich. Diese ist aber vor allem für grössten und umfochtesten Konzepte nicht vorhanden oder nicht zufriedenstellend.
-Die einzige Sache, die wirklich bestimmt ob Sache X zum Begriff A gehört, ist der Gebrauch. \\
-Dieser Gebrauch ist verschieden von Sprachspiel zu Sprachspiel.
+Die einzige Sache, die wirklich bestimmt ob Sache X zum Begriff A gehört, ist der Gebrauch.
+Dieser Gebrauch ist von Sprachspiel zu Sprachspiel verschieden.
 Um eine sinnvolle Diskussion zu führen, ob eine Programmiersprache eine Sprache ist, muss man ein Kontext spezifizieren. \\
 Ist dieser bestimmt, so kann man sich Gedanken zur Familienähnlichkeit machen.
-In den jeweils spezifischen Sprachspielen kann man teilweise grosse Ähnlichkeiten zwischen Programmiersprachen und natürlichen Sprachen festellen. Dies erklärt auch den Begriff \enquote{Programmier\textbf{sprache}}. Aber eine eindeutige, Sprachspiel-übergreifende Kategorisierung kann es nicht geben. \\
-\\
-Dieses Fazit ist natürlich nur zufolge der späten Philosophie Wittgensteins. Ein anderes Vorgehen oder eine andere Sprachphilosophie könnte genauso gut ein anderes Ergebnis erbringen.
-
+In den jeweils spezifischen Sprachspielen kann man teilweise grosse Ähnlichkeiten zwischen Programmiersprachen und natürlichen Sprachen festellen. Dies erklärt auch den Begriff \enquote{Programmier\textbf{sprache}}. Aber eine eindeutige, Sprachspiel-übergreifende Kategorisierung kann es nicht geben.
 
 
 \section{Anhang: Eine nähere Diskussion von Sprachverständnis}
