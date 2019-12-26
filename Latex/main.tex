@@ -5,11 +5,15 @@
 \usepackage{charter}
 \usepackage{index}
 \usepackage{csquotes}
+\usepackage{enumitem}
 %\usepackage{dirtytalk}
 \usepackage[margin=2cm]{geometry}
 
 
 \begin{document}
+
+\setcounter{page}{0}
+\pagenumbering{gobble}
 
 
 \title{\Large{\textbf{Eine Analyse von Programmiersprachen gemäss spätem Wittgenstein}}}
@@ -17,25 +21,27 @@
 Weinbergstrasse 105 \\
 8006, Zürich \\
 lu.maltsis@gmail.com \\
-\textit{Eingereicht beim MNG, Rämibühl}
 }
-\date{Eingereicht am 07.01.2020 \\
+\date{Eingereicht beim MNG Rämibühl am 07.01.2020 \\
 \vspace{10mm}
 Betreuung durch Christian Villiger}
 \maketitle
 \newpage
 
+\pagenumbering{arabic}
+
 \setcounter{section}{-1}
+\enlargethispage{\baselineskip}
 \tableofcontents{}
 
 \section{Einführung}
-Das Informationszeitalter hat dank des Computers unsere Gesellschaft umgewälzt. Es wird immer mehr automatisiert und informiert. Und im Kern des ganzen stehen die Programmiersprachen. Dieses neuartige Phänomen besitzt dabei gerade den Namen der Sprachen. Was hat es damit auf sich? Wieso besitzen diese Wunderkinder der Neuzeit den Namen des fundamentalen menschlichen Konzept der Sprache? \\
+Das Informationszeitalter hat dank des Computers unsere Gesellschaft umgewälzt. Es wird immer mehr automatisiert und informiert. Der Name dieses neuartigen Phänomens beinhaltet den Begriff \enquote{Sprache}. Was hat es damit auf sich? Wieso besitzen diese Wunderkinder der Neuzeit den Namen des fundamentalen menschlichen Konzepts der Sprache? \\
 Bei dieser Untersuchung soll uns der Philosoph Ludwig Wittgenstein behilflich sein. Wittgenstein hat sich fundamentale Gedanken über natürliche Sprachen gemacht. Inwiefern kann man anhand von seiner Sprachphilosophie Programmiersprachen mit natürlichen Sprachen vergleichen?
 
 
 \section{Wittgensteins Sprachphilosophie}
 
-\subsection{Die Unterscheidung zwischen Frühem und Spätem Wittgenstein}
+\subsection{Die Unterscheidung zwischen frühem und spätem Wittgenstein}
 
 Während des Ersten Weltkriegs schrieb Ludwig Wittgenstein sein erstes Hauptwerk: Die \enquote{Logisch-philosophische Abhandlung}\footnote{Wittgenstein 1921, 2}. Der Grundbaustein ist die sogenannte \enquote{Bildtheorie der Sprache}. Hier werden allgemeine Sachverhalte\footnote{Wittgenstein 1921: §2} als Konstrukte von Gegenständen\footnote{Wittgenstein 1921: §2.1} bezeichnet. Die Sprache habe dann die Aufgabe diesen Gegenständen Namen zu geben\footnote{Wittgenstein 1921: §3.22}. Diese Philosophie wird als \enquote{früher Wittgenstein} bezeichnet. \\
 \\
@@ -43,21 +49,21 @@ In dieser Arbeit beziehe mich fast ausschliesslich auf den \enquote{späten Witt
 \begin{displayquote}
 \enquote{[...] musste ich schwere Irrtümer in dem erkennen, was ich in jenem ersten Buche niedergelegt habe.}\footnote{Wittgenstein 1953: 4}
 \end{displayquote}
-In den \enquote{Philosophischen Untersuchungen}, dem Hauptwerk des späten Wittgensteins erforscht Wittgenstein die Rolle der Sprache mit einem neuen Ansatz. Er richtet sich dabei gerade gegen die Aufassung, dass die Bedeutung eines Wortes der Gegenstand ist, wofür das Wort seht.\footnote{Wittgenstein 1953: §1} \\
-Die Verwendung vieler Worte, vor allem diejenige die der Philosophie Schwierigkeiten bereiten wie zum Beispiel \enquote{schön} oder \enquote{gut} sind nicht an eine so einfache Regel gebunden. Aber die Verwendung von Begriffen weist immer noch eine gewisse Struktur auf. Es muss gewisse Regeln geben, wann es Sinn macht ein Wort zu gebrauchen und wann nicht.
+In den \enquote{Philosophischen Untersuchungen}, dem Hauptwerk des späten Wittgensteins, erforscht Wittgenstein die Rolle der Sprache mit einem neuen Ansatz. Er richtet sich dabei gerade gegen die Aufassung, dass die Bedeutung eines Wortes der Gegenstand ist, wofür das Wort seht.\footnote{Wittgenstein 1953: §1} \\
+Die Verwendung vieler Worte, vor allem derjenigen die der Philosophie Schwierigkeiten bereiten wie zum Beispiel \enquote{schön} oder \enquote{gut} sind nicht an eine so einfache Regel gebunden. Aber die Verwendung von Begriffen weist immer noch eine gewisse Struktur auf. Es muss gewisse Regeln geben, wann es Sinn macht ein Wort zu gebrauchen und wann nicht.
 
 
 \subsection{Wittgensteins Untersuchung von Regeln}
-Wie kann eine grammatische Regel (oder Regeln im allgemeinen) das Handeln festlegen? So ist doch jedes Regelfolgen mit einer Deutung der Regel verbunden.\footnote{Wittgenstein 1953: §198} \\
+Wie kann eine grammatische Regel (oder Regeln im allgemeinen) das Handeln festlegen? Es ist doch jedes Regelfolgen mit einer Deutung der Regel verbunden.\footnote{Wittgenstein 1953: §198} \\
 Findet man zum Beispiel einen Wegweiser vor, so wäre eine mögliche Deutung \enquote{Wenn Sie das auf dem Wegweiser angegeben Ziel erreichen wollen, dann können sie es am besten in Pfeilrichtung erreichen.} Doch eine entgegengesetzte Deutung wäre genauso möglich: \enquote{Wenn Sie das auf dem Wegweiser angegebene Ziel erreichen wollen, dann können Sie es am besten entgegen der Pfeilrichtung erreichen}. Würde man Regeln festlegen wie eine solcher Wegweiser zu deuten sei, müsste man diese Regeln auch wieder erklären müssen etc. Es enstünde ein infiniter Regress.\footnote{Albert 2008: 35} Demnach muss etwas anderes geben, was bestimmt wie wir eine Regel zu deuten haben.
 
 \begin{displayquote}
-\enquote{Einer Regel folgen, eine Mitteilung machen, einen Befehl geben, eine Schachpartie spielen sind Gepßogenbeiten (Gebräuche, Institutionen).}\footnote{Wittgenstein 1953: §199}
+\enquote{Einer Regel folgen, eine Mitteilung machen, einen Befehl geben, eine Schachpartie spielen sind Gepflogenheiten (Gebräuche, Institutionen).}\footnote{Wittgenstein 1953: §199}
 \end{displayquote}
 
 
 \subsection{Der Gebrauch der Sprache in Sprachspielen}
-\enquote{Bedeutung ist Gebrauch} ist der Slogan dieser neuen Sprachphilosophie.\footnote{Wittgenstein 1953: §43} Einzelne Worte korrespondieren also nicht mit einem objektiven Sachverhalt in der Welt, sondern sind rein dadurch definiert, wie sie verwendet werden. Der Gebrauch der Sprache wird hierbei als \enquote{Sprachspiel} bezeichnet.\footnote{Wittgenstein 1953: §7}
+\enquote{Bedeutung ist Gebrauch} ist der Slogan dieser neuen Sprachphilosophie.\footnote{Wittgenstein 1953: §43} Einzelne Wörter korrespondieren also nicht mit einem objektiven Sachverhalt in der Welt, sondern sind rein dadurch definiert, wie sie verwendet werden. Der Gebrauch der Sprache wird hierbei als \enquote{Sprachspiel} bezeichnet.\footnote{Wittgenstein 1953: §7}
 
 \begin{displayquote}
 \enquote{Das Wort \enquote{Sprachspiel} soll hier hervorheben, daß das Sprechen
@@ -68,22 +74,21 @@ Satzarten, mit dem zu vergleichen, was Logiker über den Bau der
 Sprache gesagt haben. (Und auch der Verfasser der Logisch-Philosophischen Abhandlung. ) \textit{(sic!)}} \footnote{Wittgenstein 1953: §23}
 \end{displayquote}
 
-Man kann sich dies mit einer Analogie zum Fussball vorstellen: Es kann durch eine Reihe an Regeln definiert werden. z.B. Geht der Ball ins Tor, kriegt die andere Mannschaft einen Punkt, Stürmer dürfen den Ball nicht mit den Händen berühren etc. Das Spiel funktioniert nur solange beide Mannschaften sich an die gleichen Regeln halten. Doch warum genau diese Regeln? \\ Man man macht es eben so, es ist eine Gepflogenheit. Das bedeutet nicht, dass die Regeln nicht einen praktischen Wert haben, doch lassen sie sich nicht auf wenig Axiome\footnote{Als Axiom bezeichne ich hier eine grundlegende Regel oder Logik, wie etwas aufgebaut ist. z.B. besitzt die Mathematik eine Vielzahl von Axiomen, von welcher all die anderen Regeln abgeleitet werden.} hinunterbrechen oder Empirisch herleiten. Denn schliesslich wurde Fussball nicht als geplantes System erschaffen. Verschiedene Kulturen und Personen mit verschiedenen Interessen und Werten haben bewusst oder unbewusst am Gesamtwerk mitgewirkt. \\
+Man kann sich dies mit einer Analogie vorstellen: Fussball kann durch eine Reihe an Regeln definiert werden. z.B. Geht der Ball ins Tor, kriegt die andere Mannschaft einen Punkt, Stürmer dürfen den Ball nicht mit den Händen berühren etc. Das Spiel funktioniert nur solange beide Mannschaften sich an die gleichen Regeln halten. Doch warum genau diese Regeln? \\ Man man macht es eben so, es ist eine Gepflogenheit. Das bedeutet nicht, dass die Regeln nicht einen praktischen Wert haben, doch lassen sie sich nicht auf wenig Axiome\footnote{Als Axiom bezeichne ich hier eine grundlegende Regel oder Logik, wie etwas aufgebaut ist. z.B. besitzt die Mathematik eine Vielzahl von Axiomen, von welcher all die anderen Regeln abgeleitet werden.} hinunterbrechen oder Empirisch herleiten. Denn schliesslich wurde Fussball nicht als geplantes System erschaffen. Verschiedene Kulturen und Personen mit verschiedenen Interessen und Werten haben bewusst oder unbewusst am Gesamtwerk mitgewirkt. \\
 \\
 Erweitern wir die Analogie und fügen ein zweites (Sprach-)Spiel hinzu: Basketball. Die Regel, wann es erlaubt ist den Ball in den Händen zu halten ist für die beiden Spielarten eine völlig andere. Genauso wie die Regeln zur Benutzung des Wortes \enquote{logisch} in den Sprachspielen der Philosophischen Diskussion und der Umgangssprache. Stellt man also die Frage, \enquote{Was bedeutet das Wort \enquote{logisch}?} ist sie äquivalent mit \enquote{Wann darf man den Ball in die Hand nehmen?}. Der Kontext, über welches (Sprach-)Spiel man spricht, fehlt. Damit man eine ergebnisreiche Diskussion über die Regel führen kann, muss man z.B. \enquote{in einer philophischen Diskussion} oder \enquote{im Fussball}, also den Kontext in welchem man die Frage stellt, zur Frage hinzufügen.
 
 \subsection{Sprachen als Städte}
 \begin{displayquote}
 \enquote{
-Unsere Sprache kann man ansehen als eine alte Stadt: Ein Gewinkel von Gässchen und Plätzen, alten und neuen Häusern, und Häusern mit Zubauten aus verschiedenen Zeiten, und dies umgeben von einer Menge neuer Vororte mit geraden und regelmässigen Strassen und einförmigen Häusern. (PU: §18)
-}
+Unsere Sprache kann man ansehen als eine alte Stadt: Ein Gewinkel von Gässchen und Plätzen, alten und neuen Häusern, und Häusern mit Zubauten aus verschiedenen Zeiten, und dies umgeben von einer Menge neuer Vororte mit geraden und regelmässigen Strassen und einförmigen Häusern.}\footnote{Wittgenstein 1953: §18}
 \end{displayquote}
-Diese Metapher erklärt Wittgensteins Sprachbild einleuchtend. Der Bau einer Schreinerei vor hundert Jahren hatte damals einen gewissen Zweck, aber die Verwendung dieser alten Schreinerei als Bibliothek hat für uns eine viel wichtigere Bedeutung. Das Pochen, dass es noch immer eine Schreinerei ist, weil es also solche erbaut wurde ist genauso lächerlich wie das Drängen, dass der englische Begriff \enquote{gay} einfach nur \enquote{glücklich} bedeutet. Die neuen Vororte, wie neue Definitionen (z.B. die Definition eines Planets von der International Astronomical Union) erfüllen noch immer ihren gewollten Zweck, aber das einzige, was ihrer Entfremdung im Weg steht, ist, dass sie von den Anwohnern noch immer so gebraucht werden. Noch immer gilt: Gebrauch ist Verwendung.
+Diese Metapher erklärt Wittgensteins Sprachbild einleuchtend. Der Bau einer Schreinerei vor hundert Jahren hatte damals einen gewissen Zweck, aber die Verwendung dieser alten Schreinerei als Bibliothek hat für uns eine viel wichtigere Bedeutung. Das Pochen, dass es noch immer eine Schreinerei ist, weil es also solche erbaut wurde ist genauso lächerlich wie das Drängen, dass der englische Begriff \enquote{gay} einfach nur \enquote{fröhlich} bedeutet. Die neuen Vororte, wie neue Definitionen (z.B. die Definition eines Planets von der International Astronomical Union) erfüllen noch immer ihren gewollten Zweck, aber das einzige, was ihrer Entfremdung im Weg steht, ist, dass sie von den Anwohnern noch immer so gebraucht werden. Noch immer gilt: Bedeutung ist Gebrauch.
 
 
 \section{Programmiersprachen}
 \subsection{Die Turing Maschine}
-Die Turing Maschine ist eine theoretisches Konzept eines sehr einfachen Computers: Sie liest ein unendliches Band an leeren Quadraten ein (Input) und schreibt auf dieses eine gewisse Abfolge an Zeichen (Output).\footnote{Charles 2008: 79} Dies tut sie nach folgendem Prinzip: Sie besitzt verschiedene Konfigurationen $\alpha, \beta, \gamma, \delta$ etc. Jeder Zustand ist mindestens einer Instruktion so wie einem Endzustand verbunden. Jene Instruktionen ermöglichen die Interaktion mit dem leeren Band. 
+Die Turing Maschine ist ein theoretisches Konzept eines sehr einfachen Computers: Sie liest ein unendliches Band an leeren Quadraten ein (Input) und schreibt auf dieses eine gewisse Abfolge an Zeichen (Output).\footnote{Charles 2008: 79} Dies tut sie nach folgendem Prinzip: Sie besitzt verschiedene Konfigurationen $\alpha, \beta, \gamma, \delta$ etc. Jeder Zustand ist mit mindestens einer Instruktion so wie einem Endzustand verbunden. Jene Instruktionen ermöglichen die Interaktion mit dem leeren Band. 
 \begin{displayquote}
 \enquote{[...] \enquote{R} means \enquote{the machine moves
 so that it scans the square immediately on the right of the one it was
@@ -98,41 +103,41 @@ Auch braucht die Maschine noch eine Reihe an Regeln:\footnote{Turing 1937: Sekti
 Beginnen wir mit dem Startzustand $\alpha$ wird das Programm die Abfolge $$01010101...$$ auf das Unendliche Band schreiben. Alan Turing, Erfinder der Turing Maschine, hat bewiesen, dass diese Art von Maschine jede berechenbare Abfolge aufschreiben kann.\footnote{Turing 1937: Sektion 2}
 
 \subsection{Compiler}
-Schlussendlich muss alles, was auf einem physischen Computer laufen soll, diesem in physikalischen Anweisungen gefüttert werden. Die Turing Maschine zeigt, wie solche Anweisungen aussehen, doch kann dies schnell mühsam bei komplexeren Programmen werden. Der Maschinencode, in welchen man nämlich schrieb, ist ein unleserlichen Fluss an Einsen und Nullen. Die Lösung: Der Compiler. \\
+Schlussendlich muss alles, was auf einem physischen Computer laufen soll, diesem in elektrischen Signalen als Anweisungen gefüttert werden. Die Turing Maschine zeigt, wie solche Anweisungen aussehen, doch kann dies schnell mühsam bei komplexeren Programmen werden. Der Maschinencode, in welchen man nämlich schrieb, ist ein unleserlicher Fluss an Einsen und Nullen. Die Lösung: Der Compiler. \\
 Ein Compiler ist ein Computerprogramm, welches eine Sprache in eine andere übersetzt.\footnote{Aho 2007: 1, Viele Definitionen engen das Ganze ein auf die Übersetzung einer Programmiersprache in Maschinencode, um Verwechslungen mit natürlichen Sprachen zu vermeiden. Doch gibt es auch Compiler, welche sich ausserhalb dieser vereinfachten Definition bewegen. (z.B. Stephens 2006: 26, zeigt einen Compiler, welcher von C++ zu C Code kompiliert und weltweit im Gebrauch ist.)} Die Grundidee dahinter ist die Folgende: Man gibt den Anweisungen im Binärcode klare Namen (e.g. \enquote{int} für eine Integerzahl) und lässt den Compiler diese in für den Computer lesbare Anwesiungen umschreiben. So kann z.B. die Instruktion der Zahlenfolge $01010101...$ wie folgt umgeschrieben werden: 
 $$ while (True) \{ print(0); print(1);\} $$
 
 \subsection{Moderne Programmiersprachen}
-Der Kern einer jeden modernen Programmiersprache ist ein solcher Compiler. So auch zum Beispiel \enquote{Python}\footnote{Python benutzt in Wirklichkeit einen \textit{Interpreter} doch sind diese beiden für unsere Zwecke funktionell identisch.}, welche in dieser Facharbeit als konkretes Beispiel verwendet wird, doch, was für Python gilt, gilt für einen Grossteil aller Programmiersprachen.\\
-Moderne Programmiersprachen sind meist weit entfernt von den physikalischen Vorgängen auf dem Prozessor. Denn wurden sie, um ihren Gebrauch zu erleichtern, so konzipiert, dass sie natürlichen Sprachen\footnote{zumeist Englisch} ähneln.\footnote{Programmiersprachen mit hoher Abstraktion dieser Art werden \enquote{high-level} gennant.} Aber trotz dieser ästhetischen Erscheinung werden dank dem Compiler alle Anweisung auf das Prinzip der Turing Maschine hinuntergebrochen.
+Der Kern einer jeden modernen Programmiersprache ist ein solcher Compiler. So auch zum Beispiel \enquote{Python}\footnote{Python benutzt in Wirklichkeit einen \textit{Interpreter} doch sind diese beiden für unsere Zwecke funktionell identisch.}, welche in dieser Facharbeit als konkretes Beispiel verwendet wird. Nämlich sollte, was für Python gilt, für einen Grossteil aller Programmiersprachen gelten.\\
+Moderne Programmiersprachen sind meist weit entfernt von den physikalischen Vorgängen auf dem Prozessor. Denn sie wurden, um ihren Gebrauch zu erleichtern, so konzipiert, dass sie natürlichen Sprachen\footnote{zumeist Englisch} ähneln.\footnote{Programmiersprachen mit hoher Abstraktion dieser Art werden \enquote{high-level} gennant.} Aber trotz dieser Erscheinung werden dank dem Compiler alle Anweisung auf das Prinzip der Turing Maschine hinuntergebrochen.
 
 
-\section{Eine Definition durch Sprachverständnis}
+\section{Eine Definition mittels Sprachverständnis}
 \subsection{Computergespräche}
-Wenn wir uns einen Computer als Gesprächspartner vorstellen und wollten mit diesem sprechen, so müssten wir zuerst einmal eine Programmiersprache lernen. Genauso wie man wenn mit Person A, welche Italienisch, Deutsch und Englisch verstehen kann, sprechen will, einer ihrer Sprachen lernen muss. Also lerne ich zum Beispiel Python und teile dem Computer die Botschaft $print(2 + 5)$ mit. Ich habe nun, nach Wittgenstein die Bedeutung dieses Ausdrucks durch Beispiele im Gebrauch gelernt.  \\
+Wenn wir uns einen Computer als Gesprächspartner vorstellen und mit diesem sprechen wollten, so müssten wir zuerst einmal eine Programmiersprache lernen. Genauso wie man wenn mit Person A, welche Italienisch, Deutsch und Englisch verstehen kann, sprechen will, einer ihrer Sprachen lernen muss. Also lerne ich zum Beispiel Python und teile dem Computer die Botschaft $print(2 + 5)$ mit. Ich habe nun, nach Wittgenstein die Bedeutung dieses Ausdrucks durch Beispiele im Gebrauch gelernt.  \\
 Wie findet der Computer aber heraus, was ich mit dieser Nachricht meine? Er benutzt seinen Compiler. Er übersetzt meine komplexe Aussage in simple Speichermanipulationen. Ist alles berechnet, so wird die Antwort $7$ gegeben. \\ Habe ich gerade ein Gespräch mit meinem Computer geführt?
 
 \subsection{Zwei Konzepte der Bedeutung}
-Die grösste Hürde, die wir bei diesem Vergleich überwinden müssen, ist die Folgende: Ist das Verständnis des Computers über die Programmiersprache, vergleichbar mit dem menschlichen Verständnis einer menschlichen Sprache? Denn übersetzt der Computer mithilfe seines Compilers, während der Mensch, nach Wittgenstein, durch den Gebrauch die Bedeutung erkennt. So müssen wir diese beiden Konzepte, der Compiler und das menschliche Sprachverständnis, gleichsetzen.
+Die grösste Hürde, die wir bei diesem Vergleich überwinden müssen, ist die folgende: Ist das Verständnis des Computers über die Programmiersprache, vergleichbar mit dem menschlichen Verständnis einer menschlichen Sprache? Denn der Computer übersetzt mithilfe seines Compilers, während der Mensch, nach Wittgenstein, durch den Gebrauch die Bedeutung erkennt. So müssen wir diese beiden Konzepte, der Compiler und das menschliche Sprachverständnis, gleichsetzen.
 
 \subsection{Die Schwierigkeit einer Definition für den Begriff \enquote{Sprache}}
 
-\subsubsection{Die Privatsprache des Schmerz}
-Die Diskussion über was \enquote{eine Sprache verstehen} ist eine Riesige (siehe Anhang).
-Denn schlussendlich ist es das Gefühl eine Sprache zu verstehen ein Privates. Das bedeutet eine Diskussion ist dadurch erschwert, dass zwei Personen niemals wissen können, ob sie wirklich das gleiche fühlen. \\
-Meist ist dies kein allzu grosses Problem, da beide ähnliche Erfahrungen mit dem Gefühl gemacht haben. So kann Person B Person A zustimmen, dass ein Schlag in den Bauch das private Gefühl \enquote{Schmerz} hervorruft. Würde man aber jemanden fragen für das Wort \enquote{Schmerz} eine immer zutreffende Definition zu geben wird die Aufgabe ausserordentlich schwieriger. \\
+\subsubsection{Die Privatsprache des Schmerzes}
+Die Diskussion über was \enquote{eine Sprache verstehen} ist, ist eine riesige (siehe Anhang).
+Denn schlussendlich ist das Gefühl eine Sprache zu verstehen ein Privates. Das bedeutet eine Diskussion ist dadurch erschwert, dass zwei Personen niemals wissen können, ob sie wirklich das gleiche fühlen. \\
+Meist ist dies kein allzu grosses Problem, da beide ähnliche Erfahrungen mit dem Gefühl gemacht haben. So kann Person B Person A zustimmen, dass ein Schlag in den Bauch das private Gefühl \enquote{Schmerz} hervorruft. Würde man aber jemanden fragen, für das Wort \enquote{Schmerz} eine immer zutreffende Definition zu nennen, wird die Aufgabe deutlich schwieriger. \\
 \\
-Es ist ein Problem, welches aus der Definition \enquote{Bedeutung ist Gebrauch} hervorspringt. Zeigt Person A auf ein graues Tier mit Rüssel und spricht die Worte \enquote{Ich habe einen Elefant}, kann Person B schlussfolgern, das dieses Tier den Namen \enquote{Elefant} trägt. Wenn Person A aber Schmerz durch zum Beispiel einen Schlag in den Bauch erleidet und die Worte \enquote{Ich habe Schmerz} spricht, kann sie nicht auf das Objekt selbst zeigen. Person A kann auf die Ursache zeigen und erklären: \enquote{Dieser Schlag hat mir Scherz angetan.} Aber wie soll Person B jetzt verstehen, was genau dieser \enquote{Schmerz} ist? Die einfachste Möglichkeit ist, dass wenn Person B auch einen Schlag in den Bauch erleidet, sie erkennt, dass sie das Gefühl \enquote{Schmerz} verspüren muss. Aber wie wurde denn nun den Schmerz definiert? \enquote{Das Gefühl welches man bei einem Schlag in den Bauch verspürt.} \\
+Es ist ein Problem, welches aus der Definition \enquote{Bedeutung ist Gebrauch} hervorspringt. Zeigt Person A auf ein graues Tier mit Rüssel und spricht die Worte \enquote{Ich habe einen Elefanten}, kann Person B schlussfolgern, das dieses Tier den Namen \enquote{Elefant} trägt. Wenn Person A aber Schmerz durch zum Beispiel einen Schlag in den Bauch erleidet und die Worte \enquote{Ich habe Schmerz} spricht, kann sie nicht auf das Objekt selbst zeigen. Person A kann auf die Ursache zeigen und erklären: \enquote{Dieser Schlag hat mir Schmerz angetan.} Aber wie soll Person B jetzt verstehen, was genau dieser \enquote{Schmerz} ist? Die einfachste Möglichkeit ist, dass wenn Person B auch einen Schlag in den Bauch erleidet, sie erkennt, dass sie das Gefühl \enquote{Schmerz} verspüren muss. Aber wie wurde nun der Schmerz definiert? \enquote{Das Gefühl welches man bei einem Schlag in den Bauch verspürt.} \\
 \\
-Diese Definition ist wohl unzufrieden stellend für eine akademische Diskussion jeglicher Art. Vielleicht besitzt eine Person kein Schmerzgefühl im Bauch, so erweitert man die Definition durch \enquote{Das Gefühl welches man bei einem Schlag auf den Körper verspürt}. Was ist aber mit anderen Schmerz verursachenden Dingen wie mentales Leiden? So fügt man noch ein Stück der Definition zu, verallgemeinert noch weiter. Aber das wahre Problem ist viel grösser. Wir können nie eine Definition finden, denn \enquote{Schmerz} ist nicht ein \enquote{Etwas}.\footnote{Wittgenstein 1953: §304}
+Diese Definition ist wohl unzufriedenstellend für eine akademische Diskussion jeglicher Art. Vielleicht besitzt eine Person kein Schmerzgefühl im Bauch. Dann erweitert man die Definition zu \enquote{Das Gefühl welches man bei einem Schlag auf den Körper verspürt}. Was ist aber mit anderen Schmerz verursachenden Dingen wie mentales Leid? So fügt man noch ein Stück der Definition zu, verallgemeinert noch weiter. Aber das wahre Problem ist viel grösser. Wir können nie eine Definition finden, denn \enquote{Schmerz} ist nicht ein \enquote{Etwas}.\footnote{Wittgenstein 1953: §304}
 
 \subsubsection{Weder Etwas noch Nichts}
-Wittgenstein bespricht dieses Problem in Länge in seinem \enquote{Privatesprache Argument}. Er benutzt unter anderem das Beispiel des Schmerz, aber wir können seine Philosophie auch auf das Gefühl des \enquote{Sprachverständnis} anwenden. Sofern wir den Behaviorismus verwerfen (siehe Anhang), müssen wir zugeben, dass sowohl auch bei Schmerz als auch bei Sprachverständnis ein innerer Vorgang existiert.\footnote{Wittgenstein 1953: §306} Das bedeutet, dass ein Unterschied existiert, zwischen der Person die vor Schmerz laut aufschreit und der Person die vor gespieltem Schmerz laut aufschreit. \\
+Wittgenstein bespricht dieses Problem in Länge in seinem \enquote{Privatesprache Argument}. Er benutzt unter anderem das Beispiel des Schmerzes, aber wir können seine Philosophie auch auf das Gefühl des \enquote{Sprachverständnisses} anwenden. Sofern wir den Behaviorismus verwerfen (siehe Anhang), müssen wir zugeben, dass sowohl auch bei Schmerz als auch bei Sprachverständnis ein innerer Vorgang existiert.\footnote{Wittgenstein 1953: §306} Das bedeutet, dass ein Unterschied existiert, zwischen der Person die vor Schmerz laut aufschreit und der Person die vor gespieltem Schmerz laut aufschreit. \\
 \\
-Wenn innere Gefühle existieren also nicht ein \enquote{Nichts} sind, so müssen sie doch ein \enquote{Etwas} sein?
+Wenn innere Gefühle existieren, also nicht ein \enquote{Nichts} sind, müssen sie doch ein \enquote{Etwas} sein?
 
 \begin{displayquote}
-\enquote{[...] - Nicht Doch. Sie ist kein Etwas, aber auch nicht ein Nichts! Das Ergebnis war nur, daß ein Nichts nicht die gleichen Dienste, wie ein Etwas, worüber sich nichts aussagen läßt. Wir verwarfen nur die Grammatik, die sich hier uns aufdrängen will.\footnote{Wittgenstein 1953: §304}}
+\enquote{[...] - Nicht Doch. Sie ist kein Etwas, aber auch nicht ein Nichts! Das Ergebnis war nur, daß ein Nichts nicht die gleichen Dienste, wie ein Etwas, worüber sich nichts aussagen läßt. Wir verwarfen nur die Grammatik, die sich hier uns aufdrängen will.}\footnote{Wittgenstein 1953: §304} %TODO
 \end{displayquote}
 Wittgenstein nennt diesen Gedankengang eine \enquote{grammatische Fiktion}.\footnote{Wittgenstein 1953: §307} Die Fiktion ist, dass wenn wir über \enquote{Erinnern} oder \enquote{Sprachverständnis} sprechen, wir uns auf ein genauso konkretes Objekt beziehen wie den Elefanten in 3.3.1. Nach Wittgenstein ist der Versuch ein privates Gefühl zu definieren und somit als Objekt zu fassen dem Scheitern verurteilt, weil wir die Bezeichnung für das Gefühl nie so lernen.
 
@@ -142,33 +147,33 @@ Angenommen es hätte Jeder eine Schachtel, darin wäre etwas, was wir \enquote{K
 \end{displayquote}
 
 Wie kann Person A wissen, ob in ihr die gleichen Vorgänge vorgehen wie in Person B, wenn sie ein Gespräch führen? 
-Zwar haben beide ein intuitives Gefühl davon, wie es sich anfühlt eine Sprache zu verstehen, aber können sie dieses Gefühl nicht mit dem Gefühl der anderen Person abgleichen. Beide haben nur ihre Schachteln mit dem Gefühl des Sprachverständnis. Zwar können sie abstrakte Metaphern oder Vergleiche verwenden, doch werden diese immer unzureichend sein, schliesslich ist jedes Wort, das sie für die Diskussion verwenden, ein eigener Käfer in der Schachtel. \\ \\
-Um uns objektiv über das Sprachverständnis unterhalten zu können, müssten wir das Sprachverständnis auch objektiv definieren. Folgen wir jedoch Wittgenstein ist das aus Prinzip unmöglich. \enquote{Bedeutung ist Gebrauch} genauso wie die Gefühle des \enquote{Schmerzes} oder des \enquote{Erinnerns} am Begriff scheitern, da sie private Gefühle sind,\footnote{Wittgenstein 1953: §304-307} so scheitert auch der Begriff des \enquote{Sprachverständnis} mit einem Objekt zu korrespondieren. Sprachverständnis ist was man \enquote{Sprachverständnis} nennt. \\
+Zwar haben beide ein intuitives Gefühl davon, wie es sich anfühlt eine Sprache zu verstehen, aber können sie dieses Gefühl nicht mit dem Gefühl der anderen Person abgleichen. Beide haben nur ihre Schachteln mit dem Gefühl des Sprachverständnisses. Zwar können sie abstrakte Metaphern oder Vergleiche verwenden, doch werden diese immer unzureichend sein, schliesslich ist jedes Wort, das sie für die Diskussion verwenden, ein eigener Käfer in der Schachtel. \\ \\
+Um uns objektiv über das Sprachverständnis unterhalten zu können, müssten wir das Sprachverständnis auch objektiv definieren. Folgen wir jedoch Wittgenstein ist das aus Prinzip unmöglich. \enquote{Bedeutung ist Gebrauch} genauso wie die Gefühle des \enquote{Schmerzes} oder des \enquote{Erinnerns} am Begriff scheitern, da sie private Gefühle sind,\footnote{Wittgenstein 1953: §304-307} so scheitert auch der Begriff des \enquote{Sprachverständnises} mit einem Objekt zu korrespondieren. Sprachverständnis ist was man \enquote{Sprachverständnis} nennt.
 
 %ß
 
 \subsection{Reflexion}
 Nach Wittgenstein ist also die Bedeutung des Wortes \enquote{Sprache} nicht durch ein privates Gefühl wie \enquote{Sprachverständnis} zu definieren. Ich wollte die  Definition der Sprache an einer \enquote{Essenz der Sprache} festlegen, welche ich irgendwie aus dem Begriff herauspresse. Schlussendlich scheitert dieser Ansatz aber an der Grundlage von Wittgensteins Sprachphilosophie. Man kann nicht von der Definition ableiten \enquote{wie der Begriff zu gebrauchen ist}, weil genau eben der Gebrauch die Bedeutung bestimmt. \\
 \\
-Mit dieser Erkenntnis kann man auch erkennen, dass eine Argumentation darüber, dass Programmiersprachen Sprachen \textit{sind} oder \textit{nicht sind}, nur anhand der Definition nicht möglich sind.\footnote{Dieses Prinzip gilt natürlich auch für andere menschliche Konzepte, wie z.B. Sport oder Kunst. So zeigt es z.B. weswegen Debatten darüber ob Aktivität X ein Sport ist, keinen wirklichen Aufschluss bringen können.} Was aber noch immer möglich ist, ist eine Analyse ob Programmiersprachen Sprachen genannt werden \textit{sollen} oder zumindest \textit{könnten}.
+Mit dieser Erkenntnis versteht man, dass eine Argumentation darüber, ob Programmiersprachen Sprachen \textit{sind} oder \textit{nicht sind}, nur anhand der Definition nicht möglich sind.\footnote{Dieses Prinzip gilt natürlich auch für andere menschliche Konzepte, wie z.B. Sport oder Kunst. So zeigt es z.B. weswegen Debatten darüber ob Aktivität X ein Sport ist, keinen wirklichen Aufschluss bringen können.} Was aber noch immer möglich ist, ist eine Analyse ob Programmiersprachen Sprachen genannt werden \textit{sollen} oder zumindest \textit{könnten}.
 
 
 \section{Gedanken über den Gebrauch und Möglichkeiten von Programmiersprachen und natürlichen Sprachen}
 
 \subsection{Wie Ähnlichkeiten den Gebrauch beeinflussen können}
-Warum nennt man Programmiersprachen also Sprachen? Wenn man die Suche nach einem direkt Objekt aufgibt, bleibt noch eine andere Möglichkeit? Kann nicht jedes Wort für jedes Ding angewendet werden? \\
-Wie kommen wir überhaupt zustande ohne eine Definition für das Wort \enquote{Sprache}? Kann man nicht auf einen Pinguin zeigen und erklären: \enquote{Das ist auch eine Sprache.} Jeder würde den Zeigenden für verrückt halten. Natürlich ist ein Pinguin nicht eine Sprache. \\
+Warum nennt man Programmiersprachen also Sprachen? Wenn man die Suche nach einem direkt Objekt aufgibt, bleibt dann noch eine andere Möglichkeit? Kann nicht jedes Wort für jedes Ding angewendet werden? \\
+Wie können wir Programmiersprachen und Sprachen ohne eine Definition für das Wort \enquote{Sprache} vergleichen? Kann man nicht auf einen Pinguin zeigen und erklären: \enquote{Das ist auch eine Sprache.} Jeder würde den Zeigenden für verrückt halten. Natürlich ist ein Pinguin nicht eine Sprache. \\
 Das ist der Moment, in welchem wir von strikten Definitionen abkommen müssen. Gleichzeitig müssen wir zugeben, dass dem Wort \enquote{Sprache} keine Definition zugrunde liegt, aber können auch nicht verneinen, dass die Verwendung eines Wortes durch gewisse Prinzipien eingeschränkt ist. \\
 Bedenken wir ein Beispiel: \\
 \\
 Franz rennt in die Küche und schreit: \enquote{Es hat eine Bombe!} \\
 \\
 Wie verstehen die Eltern nun die Aussage des Kindes? Das Wort \enquote{Bombe} erweckt ein gewisses Bild. Zum Beispiel erscheint ihnen das Bild einer baldigen Explosion. Aber es gibt auch Gasbomben. Vielleicht denken sie auch an einen Zeitzünder. Es gibt aber auch solche mit sofortiger Explosion. \\
-Wir erreichen die sogenannte \enquote{Familienähnlichkeit} Wittgensteins.\footnote{Wittgenstein 1953: §67} Es ist wohl schwierig eine übergreifende Definition für das Wort \enquote{Bombe} zu finden, gibt es allerdings übergreifende Ähnlichkeiten in den Objekten, auf welche sich das Wort bezieht. \\
-Dieses Kapitel soll ein Versuch sein, ein Teil dieser Familienähnlichkeiten zwischen Programmiersprachen und natürlicher Sprachen zu erhellen.
+Wir erreichen die sogenannte \enquote{Familienähnlichkeit} Wittgensteins.\footnote{Wittgenstein 1953: §67} Es ist wohl schwierig eine übergreifende Definition für das Wort \enquote{Bombe} zu finden. Aber es gibt übergreifende Ähnlichkeiten in den Objekten, auf welche sich das Wort bezieht. \\
+Dieses Kapitel soll ein Versuch sein, einen Teil dieser Familienähnlichkeiten zwischen Programmiersprachen und natürlichen Sprachen zu erhellen.
 
 \subsection{Wittgenstein auf zwei Ebenen}
-Ich möchte hierbei kurz der Verwendung Wittgensteins Sprachphilosophie bewusst werden. Wir haben Wittgensteins These, dass \enquote{Sprachverständnis} nicht definiert werden kann, angenommen. Dies hat uns zum Prinzip der Familienähnlichkeit geführt, was die Prämisse unseres gesamten Vergleichs ist. Das ist was ich die Verwendung Wittgensteins auf \enquote{makroskopischer Ebene} nenne.
+Ich möchte in diesem Unterkaptiel kurz die Verwendung von Wittgensteins Sprachphilosophie erklären. Wir haben Wittgensteins These, dass \enquote{Sprachverständnis} nicht definiert werden kann, angenommen. Dies hat uns zum Prinzip der Familienähnlichkeit geführt, was die Prämisse unseres gesamten Vergleichs ist. Das ist was ich die Verwendung Wittgensteins auf \enquote{makroskopischer Ebene} nenne.
 Weil Wittgenstein aber auch so viel über die Eigenschaften einer Sprache geschrieben hat, können wir auch im Verlauf unserer Vergleiche seine Beschreibungen und Erkenntnisse über natürliche Sprachen verwenden. Dies nenne ich die \enquote{mikroskopische Ebene} meiner Verwendung Wittgensteins.
 
 
@@ -176,67 +181,67 @@ Weil Wittgenstein aber auch so viel über die Eigenschaften einer Sprache geschr
 \subsubsection{Das Definieren von neuen Funktionen}
 Fast jede Programmiersprache bietet die Möglichkeit neue Funktionen zu definieren. Diese sind sozusagen Kurzfassungen komplizierter Operationen. Vergleichbar ist das mit mathematischen Funktionen: So ist zum Beispiel die Funktion $f(x) = \frac{(x^2 + 2)}{x}$ eine Kurzfassung mehrerer Operationen hintereinander. Will ich diese Funktion zum Beispiel in einer Rechnung mehrmals anwenden, so kann ich einfach $f(2) + f(3) - f(4)$ schreiben. \\
 Die Gemeinsamkeiten mit einem Compiler sind nicht zu übersehen. Doch muss man hier klar unterscheiden: Ein Compiler übersetzt von einer Sprache in eine andere, eine Funktion übersetzt von einer Sprache in dieselbe. Ich kann meine Rechnung genauso gut als $\frac{(2^2 + 2)}{2} + \frac{(3^2 + 2)}{3} - \frac{(4^2 + 2)}{4}$ schreiben. So muss ich aber viel Information mehrmals hinschreiben, weshalb man eben diese Kurzfassung definiert. \\
-Die Parallele zu einer Funktion ist ein neues Wort. Halte ich zum Beispiel ein Referat über eine neu-gefundene Krankheit, erkläre ich deren Namen als \enquote{Entquillis}. Erwähne ich den Namen \enquote{Entquillis} in einem anderen Kontext, so können sich die Zuschauer \enquote{die neu-gefundene Krankheit} denken und ich muss mich nicht jedes Mal wiederholen. \\
+Die Parallele zu einer Funktion ist ein neues Wort. Halte ich zum Beispiel ein Referat über eine neu-gefundene Krankheit, erkläre ich deren Namen als \enquote{Entquillis}. Erwähne ich den Namen \enquote{Entquillis} in einem anderen Kontext, so können sich die Zuschauer \enquote{die neu-gefundene Krankheit} denken und ich muss mich nicht jedes Mal wiederholen.
 
 \subsubsection{Das Definieren von neuen Programmiersprachen}
-Ein wichtiger Teil von Programmiersprachen ist hierbei die Zugänglichkeit. Nicht nur kann jeder Python herunterladen, sondern auch den Quellcode, also wie Python den Code in Anweisungen für den Computer übersetzt, sich anschauen.\footnote{Python Software Foundation 2019a} Wäre ich zum Beispiel darüber unglücklich, dass Pythons Funktion zur Ausgabe \enquote{print} heisst, könnte ich deren Namen im Quellcode zu \enquote{outprint} umbennenen. Ich habe gerade meine eigene Programmiersprache geschaffen und nenne sie z.B. \enquote{Pythan}. Wen ich wollte könnte ich diese veröffentlichen und verbreiten.
+Ein wichtiger Teil von Programmiersprachen ist hierbei die Zugänglichkeit. Nicht nur kann jeder Python herunterladen, sondern sich auch den Quellcode, also wie Python den Code in Anweisungen für den Computer übersetzt, anschauen.\footnote{Python Software Foundation 2019a} Wäre ich zum Beispiel darüber unglücklich, dass Pythons Funktion zur Ausgabe \enquote{print} heisst, könnte ich deren Namen im Quellcode zu \enquote{outprint} umbennenen. Ich habe gerade meine eigene Programmiersprache geschaffen und nenne sie z.B. \enquote{Pythan}. Wen ich wollte könnte ich diese veröffentlichen und verbreiten.
 
 \subsubsection{Libraries und Sprachspiele}
-Viele Programmiersprachen bündeln mehrere Funktionen zusammen. Dies ist eine sogennante \enquote{Library}.\footnote{Deutsch: Bibliothek, der deutsche Begriff ist jedoch kaum in Gebrauch, weshalb ich \enquote{Library} verwende}. Python kommt mit einer Vielzahl an eingebauter Libraries, eine davon ist die sogennante \enquote{Math}. Math ist auf mathematische Operationen spezialisiert. Will ich also zum Beispiel die Quadratwurzel einer Zahl, schreibe ich folgendes:
+Viele Programmiersprachen bündeln mehrere Funktionen zusammen. Dies ist eine sogennante \enquote{Library}.\footnote{Deutsch: Bibliothek, der deutsche Begriff ist jedoch kaum in Gebrauch, weshalb ich \enquote{Library} verwende}. Python kommt mit einer Vielzahl an eingebauten Libraries, eine davon ist die sogennante \enquote{Math}. Math ist auf mathematische Operationen spezialisiert. Will ich also zum Beispiel die Quadratwurzel einer Zahl, schreibe ich folgendes:
 $$import \hspace{1mm} math$$
 $$math.sqrt(36)$$
 Die erste Zeile erklärt dem Compiler, dass ich die Math Library verwenden will. Es ist sozusagen ein \enquote{Ich will über Mathematik sprechen}. \\
 Die Zweite Zeile wendet die Funktion an. \enquote{In der Mathematik nimm die Quadratwurzel der Zahl 36.} \\
 
 \subsubsection{Was war zuerst, die Definition oder der Gebrauch?}
-Die Übereinstimmung mit dem Sprachspiel nach mikroskopischen Wittgenstein ist nicht sofort ersichtlich: Denn ist für Wittgenstein ein Sprachspiel durch den Gebrauch definiert, während die Libraries ihre Funktionen unabhängig von deren Gebrauch besitzen. Oder zumindest scheinen sie unabhängig vom Gebrauch, bis man bedenkt, dass eine Funktion noch immer von einer Person geschrieben werden muss. Diese Person will die Funktion für eine Kurzfassung verschiedener Rechnungschritte \textbf{gebrauch}en. Das bedeutet eine Existenz einer Funktion bedingt immer einen beabsichtigten Gebrauch.\footnote{Es eröffnen sich neue Fragen, inwiefern die Auteur-Theorie auf geschriebenen Code bezogen werden kann.}
+Die Übereinstimmung mit dem Sprachspiel nach mikroskopischem Wittgenstein ist nicht sofort ersichtlich: Denn für Wittgenstein ist ein Sprachspiel durch den Gebrauch definiert, während die Libraries ihre Funktionen unabhängig von deren Gebrauch besitzen. Oder zumindest scheinen sie unabhängig vom Gebrauch, bis man bedenkt, dass eine Funktion noch immer von einer Person geschrieben werden muss. Diese Person will die Funktion für eine Kurzfassung verschiedener Rechnungschritte \textbf{gebrauch}en. Das bedeutet eine Existenz einer Funktion bedingt immer einen beabsichtigten Gebrauch.\footnote{Es eröffnen sich neue Fragen, inwiefern die Auteur-Theorie auf geschriebenen Code bezogen werden kann.}
 
 \subsubsection{Bedeutung ist Demokratie}
 Libraries sind oft nicht eine private Sache.\footnote{Eine Diskussion privater Libraries und Wittgensteins Diskussion über Privatsprachen wäre hier möglich.} Die Math Library ist weltweit im Gebrauch, denn ist sie als eingebaute Library in jeder Version von Python inbegriffen und wird von der Python Software Foundation verwaltet. \\
 \\
-Ein potenzieller Unterschied der sich hier aufdrängt ist folgender: \enquote{Wie kann man denn ein Kulturgut wie die natürliche Sprache mit einer wohlkurierter Sammlung an Instruktionen vergleichen? Welches Wort was in einer natürlichen Sprache was bedeutet, ist eine Sache der Allgemeinheit, während Python und somit auch die Math Library einen klaren Autor besitzen. Nur dieser kann also die Sprache verändern.} \\
+Ein potenzieller Unterschied, der sich hier aufdrängt, ist folgender: \enquote{Wie kann man denn ein Kulturgut wie die natürliche Sprache mit einer wohlkurierter Sammlung an Instruktionen vergleichen? Welches Wort in einer natürlichen Sprache was bedeutet, ist eine Sache der Allgemeinheit, während Python und somit auch die Math Library einen klaren Autor besitzen. Nur dieser kann also die Sprache verändern.} \\
 \\
 Diese Auffassung zieht jedoch nicht in Betracht unter welcher Lizenz Python steht. Dessen GPL-Lizenz\footnote{Python Software Foundation 2019b} erlaubt nämlich Veränderungen und auch Veröffentlichung dieser Veränderungen.\footnote{GNU 2019} Dies bedeutet, das mir nichts im Weg steht, meine eigene Version von Python namens \enquote{Pythan} zu veröffentlichen. Niemand besitzt ein absolutes Monopol über Python. \\
 \\
-Die Rolle der Python Software Foundation kann man mit derjenigen der Académie française vergleichen. Sie ist ein höchst respektierte Autorität und haben dadurch einen grossen Einfluss auf die Sprache.\footnote{Lebars 1913: 89} Doch basiert diese Autorität nicht auf einer Kontrolle, sondern besteht sie nur, da eine grosse Anzahl Benutzer der Sprache, die Python Software Foundation beziehungsweise die Académie française respektieren. \\
+Die Rolle der Python Software Foundation kann man mit derjenigen der Académie française vergleichen. Sie ist eine höchst respektierte Autorität und hat dadurch einen grossen Einfluss auf die Sprache.\footnote{Lebars 1913: 89} Doch basiert diese Autorität nicht auf einer Kontrolle, sondern besteht nur, da eine grosse Anzahl Benutzer der Sprache, die Python Software Foundation beziehungsweise die Académie française respektieren. \\
 \\
-Ausgesprochen grösser ist der Einfluss, welchen die Allgemeine Verwendung eines Begriffs und somit dessen Bedeutung auf die Sprachautoritäten hat. Als zum Beispiel 2015 der Oxford Dictionary das Verb \enquote{twerk} aufnahm, tat er dies, weil das Wort grosse gesellschaftliche Relevanz besass.\footnote{20 Minuten 2015} \footnote{Oxford Dictionary 2015} Im gleichen Jahr fügte die Python Software Foundation die \enquote{async/await} Syntax ein, welche in den letzten Jahren zu einem fundamentalen Teil von vielen Applikationen wurde.\footnote{Robinson 2015} Dies war nur eine Reaktion auf die vielen inoffiziellen Libraries, welche die \enquote{async/await} schon eingeführt hatten. \\
+Ausgesprochen grösser ist der Einfluss, welchen die allgemeine Verwendung eines Begriffs und somit dessen Bedeutung auf die Sprachautoritäten hat. Als zum Beispiel 2015 der Oxford Dictionary das Verb \enquote{twerk} aufnahm, tat er dies, weil das Wort grosse gesellschaftliche Relevanz besass.\footnote{20 Minuten 2015} \footnote{Oxford Dictionary 2015} Im gleichen Jahr fügte die Python Software Foundation die \enquote{async/await} Syntax ein, welche in den letzten Jahren zu einem fundamentalen Teil von vielen Applikationen wurde.\footnote{Robinson 2015} Dies war nur eine Reaktion auf die vielen inoffiziellen Libraries, welche die \enquote{async/await} schon eingeführt hatten. \\
 Sprachautoritäten bestimmen die Bedeutung nicht direkt, doch sie beeinflussen den Gebrauch.
 
 
 \subsection{Sprachevolution}
 
 \subsubsection{Eine falsche Dichotomie}
-Programmiersprachen sind künstliche Sprache. Das bedeutet, dass die Sprachen geschaffen wurden mit dem expliziten Ziel eine Sprache zu erstellen. Manche ziehen hier eine starke Grenze zwischen Programmiersprachen und natürlichen Sprachen. Programmiersprachen sind unnatürliche, neue, strikte, wohl-definierte Strukturen, während natürliche Sprachen uralte, freie, menschliche Gewirre sind.
+Programmiersprachen wurden mit dem expliziten Ziel, eine Sprache zu erstellen, geschaffen. Manche ziehen hier eine starke Grenze zwischen Programmiersprachen und natürlichen Sprachen. Programmiersprachen sind künstliche, neue, strikte, wohl-definierte Strukturen, während natürliche Sprachen uralte, freie, menschliche Gewirre sind.
 Ich habe diese Vorstellung der vollkommen strikten Programmiersprache im vorherigen Unterkapitel schon angefochten. Nun will ich auch diese Zweiteilung der künstlichen und natürlichen Sprachen differenziert betrachten.
 
 \subsubsection{Das natürliche Wachstum von Programmiersprachen am Beispiel von Python}
-Pythons neuste Version ist derzeit 3.8.0\footnote{14.12.2019}. Es ist eine relativ neue Programmiersprache, aber trotzdem erlebte es schon mehrere Wachstumsperioden.\footnote{Wikipedia 2019, die meisten Veränderungen sind leider zu technisch, um sie hier zufriedenstellend zu besprechen} Seit seiner ersten Version 1989 hat es riesige Veränderungen durchgemacht, wie z.B. eine komplette Umwälzung der Sprache von Version 2 zu Version 3. Wie in 4.3.5 besprochen ist die Grundlage dieser Veränderungen meist nicht eine logische Konsequenz sondern ein Druck von aussen. \\
-Vergleicht man diese immensen Änderungen in einem so kurzen Zeitraum könnte man sogar rückschliessen, dass gewisse Programmiersprachen in ihrem Wachstum lebendiger sind als natürliche Sprachen. Diese Schlussfolgerung hat natürlich gewisse Schwierigkeiten, wie z.B. die Extrapolation, dass das Wachstum einer Sprache konstant ist. Was aber mit Sicherheit feststellen kann, ist, dass Programmiersprachen alles andere als starr in ihrer Entwicklung sind.
+Pythons neuste Version ist derzeit 3.8.0\footnote{14.12.2019}. Es ist eine relativ neue Programmiersprache, aber trotzdem erlebte sie schon mehrere Wachstumsperioden.\footnote{Wikipedia 2019, die meisten Veränderungen sind leider zu technisch, um sie hier zufriedenstellend zu besprechen} Seit ihrer ersten Version 1989 hat sie riesige Veränderungen durchgemacht, wie z.B. eine komplette Umwälzung der Sprache von Version 2 zu Version 3. Wie in 4.3.5 besprochen, ist die Grundlage dieser Veränderungen meist nicht eine logische Konsequenz sondern ein Druck von aussen. \\
+Vergleicht man diese immensen Änderungen in einem so kurzen Zeitraum könnte man sogar rückschliessen, dass gewisse Programmiersprachen in ihrem Wachstum lebendiger sind als natürliche Sprachen. Diese Schlussfolgerung weist natürlich gewisse Schwierigkeiten auf, wie z.B. die Extrapolation, dass das Wachstum einer Sprache konstant ist. Was man aber mit Sicherheit feststellen kann, ist, dass Programmiersprachen alles andere als starr in ihrer Entwicklung sind.
 
-\subsubsection{Künstliche Natürliche Sprachen am Beispiel von Nynorsk}
+\subsubsection{Künstliche natürliche Sprachen am Beispiel von Nynorsk}
 In der Norwegischen Sprache gibt es zwei verschiedene Arten zu schreiben: Bokmål (\enquote{Buchsprache}) und Nynorsk (\enquote{Neu-Norwegisch}). Bokmål ist ein Überbleibsel der dänischen Herrschaft über Norwegen und ähnelt der dänischen Schreibweise zu einem Grossteil. Nynorsk aber, ist das Resultat einer Sprachreform im 19. Jahrhundert. Ivar Aasen hat die verschiedenen norwegischen Dialekte erforscht und versucht sie alle in eine geschriebene Sprache einzubauen.\footnote{Vikør 2015} \\
-Was vielleicht wie ein Einzelfall klingt, passierte nur schon Europa öfters. So auch die deutsche Rechtschreibreform von 1996. Die Auffassung, dass natürliche Sprachen unbehelligt von ganz klaren künstlichen Eingriffen sind, ist eine falsche.
+Was vielleicht wie ein Einzelfall klingt, passierte nur schon in Europa öfters. So auch die deutsche Rechtschreibreform von 1996. Die Auffassung, dass natürliche Sprachen unbehelligt von ganz klaren künstlichen Eingriffen sind, ist eine falsche.
 
 
 \subsection{Diskrepanzen}
 \subsubsection{Verwendung in menschlicher Interaktion}
-Es ist offensichtlich, doch darf es nicht unerwähnt bleiben: Ich kann man mich mit einer anderen Person kaum in einer zurzeit bestehenden Programmiersprache unterhalten. Programmiersprachen sind zur Kommunikation zwischen Mensch und Computer konzipiert und als Kommunikationsmittel in einer rein menschlichen Gesellschaft nahezu nutzlos. \\
-Auch besitzt niemand eine Programmiersprache als Muttersprache. Es wird eine Programmiersprache ein gewisses Verständnis einer natürlichen Sprache -- meistens Englisch --  verlangt, da die Befehle, welcher der Compiler erkennt, dieser angenähert sind.\footnote{Ein Gegenbeispiel für diesen Punkt wäre die Programmiersprache \enquote{Brainfuck}} \\
+Es ist offensichtlich, doch darf es nicht unerwähnt bleiben: Ich kann mich mit einer anderen Person kaum in einer zurzeit bestehenden Programmiersprache unterhalten. Programmiersprachen sind zur Kommunikation zwischen Mensch und Computer konzipiert und als Kommunikationsmittel in einer rein menschlichen Gesellschaft nahezu nutzlos. \\
+Auch besitzt niemand eine Programmiersprache als Muttersprache. Es wird von den Benutzern einer Programmiersprache ein gewisses Verständnis einer natürlichen Sprache -- meistens Englisch --  verlangt, da die Befehle, welcher der Compiler erkennt, dieser angenähert sind.\footnote{Ein Gegenbeispiel für diesen Punkt wäre die Programmiersprache \enquote{Brainfuck}} 
 
 
 \subsubsection{Kontext}
-Stellt man einem heutigen Sprachmodell (z.B. Cleverbot, siehe Anhang) die Frage \enquote{Hast du gewonnen?}, so erhält man zum Beispiel die Antwort \enquote{Ja, habe ich}.\footnote{Durch Experiment bestätigt} Aber was wurde überhaupt gewonnen? Cleverbot nimmt auf nichts in Bezug, weil er nur meinen Text als Eingabe verwendet. Fragt man eine menschliche Person diesselbe Frage, so könnte man dieselbe Antwort erhalten insofern es etwas gibt, worauf man sich beziehen kann. Zum Beispiel sah die Person gestern im Fernsehen, wie ihre Fussballmannschaft gewann. Die Person bezieht sich auf ein anderes Erlebnis (also behavioristisch einen anderen Reiz, eine andere Eingabe). \\
-Diese fehlende logische Kombination von Reizen, entlarvt viele Sprachmodelle als solche bei zum Beispiel Rückfragen und Bezug auf aktuelle Ereignisse. Nämlich ist das Prinzip von Kontext extrem kompliziert.
+Stellt man einem heutigen Sprachmodell (z.B. Cleverbot, siehe Anhang) die Frage \enquote{Hast du gewonnen?}, so erhält man zum Beispiel die Antwort \enquote{Ja, habe ich}.\footnote{Durch Experiment bestätigt} Aber was wurde überhaupt gewonnen? Cleverbot nimmt auf nichts Bezug, weil er nur meinen Text als Eingabe verwendet. Fragt man eine menschliche Person dieselbe Frage, so könnte man dieselbe Antwort erhalten, insofern es etwas gibt, worauf man sich beziehen kann. Zum Beispiel sah die Person gestern im Fernsehen, wie ihre Fussballmannschaft gewann. Die Person bezieht sich auf ein anderes Erlebnis (also behavioristisch einen anderen Reiz, eine andere Eingabe). \\
+Diese fehlende logische Kombination von Reizen entlarvt viele Sprachmodelle als solche bei zum Beispiel Rückfragen und Bezug auf aktuelle Ereignisse. Nämlich ist das Prinzip von Kontext extrem kompliziert.
 
-\subsubsection{Starre Synatx}
-Auch sind Programmiersprachen in der Syntax klar definiert und meist sorgen schon eine kleine Diskrepanzen mit der idealen \enquote{Grammatik} zu einem Fehler in der Kompilierung. Als Beispiel verlangt die Programmiersprache \enquote{C} zum Beispiel ein Strichpunkt nach jeder Anweisung. Schreibt man jedoch einen Satz und beendet diesen nicht mit einem Punkt, ist das Sprachverständnis nur wenig beeinflusst. Computer sind gebaut um streng einer Anweisung nach der anderen zu folgen. Mehrdeutigkeiten und Unklarheiten können dieses präzise System schnell lahmlegen. Menschen dagegen sind evolutionsbedingt viel angepasster an vage Reize und Mustererkennung.
+\subsubsection{Starre Syntax}
+Auch sind Programmiersprachen in der Syntax klar definiert und meist sorgen schon kleine Diskrepanzen zur idealen \enquote{Grammatik} zu einem Fehler in der Kompilierung. Als Beispiel verlangt die Programmiersprache \enquote{C} zum Beispiel ein Strichpunkt nach jeder Anweisung. Schreibt man jedoch einen Satz und beendet diesen nicht mit einem Punkt, ist das Sprachverständnis nur wenig beeinflusst. Computer sind gebaut um streng einer Anweisung nach der anderen zu folgen. Mehrdeutigkeiten und Unklarheiten können dieses präzise System schnell lahmlegen. Menschen dagegen sind evolutionsbedingt viel angepasster an vage Reize und Mustererkennung.
 
 \subsection{Kreuzkontamination über Sprachspiele hinweg}
 
 \subsubsection{Plastikpflanzen}
 Die Tatsache, dass der verbreitetste Begriff für Programmiersprachen doch genau den Begriff \enquote{Sprachen} in sich trägt, zeigt, dass wir Programmiersprachen in gewissen Aspekten als Sprachen ansehen. Nämlich wäre es genauso möglich gewesen Programmiersprachen als z.B. \enquote{Programmierprotokoll} zu bezeichnen. Bedeutung ist Gebrauch. \\
-Der offensichtliche Einwand ist, dass z.B. eine \enquote{Plastikpflanze} keine richtige Pflanze ist, obwohl dieses im Name steht. Hier liegt aber ein Missverständnis der Sprachspiele vor: Nämlich hat der Begriff \enquote{Pflanze} eine rigide Funktion in den Sprachspielen der Kulinarik oder der Naturwissenschaften eine Bedeutung, in welcher Plastikpflanzen nicht miteinbezogen sind. Aber im Sprachspiel der Dekoration sind die Unterschiede zwischen natürlichen Pflanzen und Plastikpflanzen soweit zu vernachlässigen, dass beide als Pflanzen bezeichnet werden können. \\
+Der offensichtliche Einwand ist, dass z.B. eine \enquote{Plastikpflanze} keine richtige Pflanze ist, obwohl dieses im Name steht. Hier liegt aber ein Missverständnis der Sprachspiele vor: Nämlich hat der Begriff \enquote{Pflanze} eine rigide Funktion in den Sprachspielen der Kulinarik oder der Naturwissenschaften eine Definition, welche Plastikpflanzen nicht miteinbezieht. Aber im Sprachspiel der Dekoration sind die Unterschiede zwischen natürlichen Pflanzen und Plastikpflanzen soweit zu vernachlässigen, dass beide als Pflanzen bezeichnet werden können. \\
 Das bedeutet, der Begriff \enquote{Pflanze} im Wort \enquote{Plastikpflanze} stammt aus einem Sprachspiel, aber das Wort \enquote{Plastikpflanze} besteht in allen Sprachspielen. Es kam sozusagen zu einer Kontamination von einem Sprachspiel auf die anderen über einen Begriff.
 
 \subsubsection{Programmiersprachspiele}
@@ -244,26 +249,30 @@ Warum Programmiersprachen den Begriff \enquote{Sprache} trotz der vielen Diskrep
 
 
 \section{Konklusion}
-Sprache hat eine ausserordentlich komplexe Struktur. Ob eine Sache X zum Begriff A hinzuzählt ist nur mit einer klaren Definiton möglich. Diese ist aber vor allem für grössten und umfochtesten Konzepte nicht vorhanden oder nicht zufriedenstellend.
+Sprache hat eine ausserordentlich komplexe Struktur. Ob eine Sache X zum Begriff A hinzuzählt ist nur mit einer klaren Definiton möglich. Diese ist aber vor allem für die grössten und umfochtesten Konzepte nicht vorhanden oder nicht zufriedenstellend.
 Die einzige Sache, die wirklich bestimmt ob Sache X zum Begriff A gehört, ist der Gebrauch.
 Dieser Gebrauch ist von Sprachspiel zu Sprachspiel verschieden.
-Um eine sinnvolle Diskussion zu führen, ob eine Programmiersprache eine Sprache ist, muss man ein Kontext spezifizieren. \\
+Um eine sinnvolle Diskussion zu führen, ob eine Programmiersprache eine Sprache ist, muss man einen Kontext spezifizieren. \\
 Ist dieser bestimmt, so kann man sich Gedanken zur Familienähnlichkeit machen.
 In den jeweils spezifischen Sprachspielen kann man teilweise grosse Ähnlichkeiten zwischen Programmiersprachen und natürlichen Sprachen festellen. Dies erklärt auch den Begriff \enquote{Programmier\textbf{sprache}}. Aber eine eindeutige, Sprachspiel-übergreifende Kategorisierung kann es nicht geben.
+
+\newpage
+\renewcommand\thesection{\roman{section}}
+\setcounter{section}{0}
 
 
 \section{Anhang: Eine nähere Diskussion von Sprachverständnis}
 
 \subsection{Wie ein Computer eine natürliche Sprache verstehen kann}
 \subsubsection{Der Turing Test}
-Kann man die Berechnungen eines Computers auf das Niveau menschlicher Gedanken hochheben? Kann eine Maschine denn denken? Alan Turing hat sich diese Frage auch gestellt, doch war sich auch der Probleme dieser Fragestellung bewusst. Denn könne man die Begriffe \enquote{Maschine} und \enquote{denken} so umformulieren, dass man Maschinen auf ewig aus der Fähigkeit Gedanken zu besitzen ausschliesst.\\
+Kann man die Berechnungen eines Computers auf das Niveau menschlicher Gedanken hochheben? Kann eine Maschine denn denken? Alan Turing hat sich diese Frage auch gestellt, doch war er sich auch der Probleme dieser Fragestellung bewusst. Denn man könne die Begriffe \enquote{Maschine} und \enquote{denken} so umformulieren, dass man Maschinen auf ewig aus der Fähigkeit Gedanken zu besitzen ausschliesst.\\
 \\
 Als Alternative beschreibt er das heutzutage weltberühmte \enquote{Imitation Game}:
 Drei Personen in voneinander abgetrennten Räumen. Der Befrager (C) versucht herauszufinden wer ein Mann (X) und wer eine Frau (Y) ist. So müssen die beiden Spieler den Befrager davon überzeugen, dass sie X sind. Nach der Befragung muss C eine der folgenden Aussagen machen, entweder \enquote{A ist Y} oder \enquote{B ist Y}. Was passiert wenn man A mit einem Computer, X mit Maschine und Y mit Mensch ersetzt? Der Befrager muss Mensch und Maschine voneinander unterscheiden.\footnote{Turing 1950: 3.1} \\
 
 \subsubsection{Ein Compiler für die menschliche Sprache}
-Wenn eine Maschine diesen Test besteht, schliesst Turing, kann die Maschine denken. Natürlich wäre das Sprachverständnis hier einbegriffen, was man an der Art des Testes klar erkennen kann. Die Aussage ist diese: Wenn Computer in der Lage sind menschliche Sprache auf dem gleichen Niveau wie Menschen verwenden können, ist ihr Verständnis davon auch das Gleiche. Und Dieses Verständnis wird schlussendlich auch von einem Computerprogramm gesteuert. Ist das dann ein Compiler für die menschliche Sprache? \\
-Also ist das Verarbeiten von Programmiersprachen auf Seiten eines Turing-Test-bestehenden Computers nicht davon zu unterscheiden von dem \enquote{Verständnis} einer natürlichen Sprache. \\
+Wenn eine Maschine diesen Test besteht, meint Turing, kann die Maschine denken. Natürlich wäre das Sprachverständnis hier inbegriffen, was man an der Art des Testes klar erkennen kann. Die Aussage ist diese: Wenn Computer in der Lage sind menschliche Sprache auf dem gleichen Niveau wie Menschen verwenden, ist ihr Verständnis darüber auch das Gleiche. Und dieses Verständnis wird schlussendlich auch von einem Computerprogramm gesteuert. Ist das dann ein Compiler für die menschliche Sprache? \\
+Also ist das Verarbeiten von Programmiersprachen auf Seiten eines Turing-Test-bestehenden Computers nicht von dem \enquote{Verständnis} einer natürlichen Sprache zu unterscheiden. \\
 
 
 \subsubsection{Das Sprachverständnis heutiger Programme}
@@ -273,7 +282,7 @@ Was ist das Geheimnis dieser Wundermaschinen? Wie beherrschen sie komplexe Gramm
 \subsubsection{Übereinstimmung mit Wittgenstein}
 Gibt es einen Compiler für die menschliche Sprache, so ist der Turing Test ein guter Ansatz für dessen Bewertung. Die fortgeschrittensten Programme in der Sprachimitation, basieren hierbei jedoch nicht auf einer feste Logik, sondern lernen durch Beispiele im Gebrauch der verschiedenen Worte. Das stimmt nahezu perfekt mit Wittgensteins Aussage über Bedeutung der Sprache überein.
 
-\subsection{Kritik am Sprachverständnis von Computer}
+\subsection{Kritik am Sprachverständnis von Computern}
 \subsubsection{Die Erfindung des Turing Test}
 \begin{displayquote}
 \enquote{At the very dawn of the computer age, Alan Turing confronted a cacophony of
@@ -283,11 +292,11 @@ debate by devising what he thought would be a conversation-stopper: he described
 a simple operational test that would surely satisfy the skeptics: anything that could
 pass this test would be a thinker for sure, wouldn’t it?}\footnote{Epstein 2008: vii} \footnote{Deutsche Übersetzung: In den frühsten Jahren der Informatik versuchte Alan Turing die zumeist völlig falschen Debatten darüber, ob Wissenschaftler jemals einen denkenden Computer bauen könnten, aufzulösen. Sehr rational versuchte er die derzeitigen Debatten zu ordnen, indem er einen Konversationsstopper einführte. ER beschrieb einen simplen Test, welcher auch die Skeptiker nicht unterschlagen könnten: Alles was den Test besteht, könne denken, ganz sicher, oder?}
 \end{displayquote}
-Die allgemeine Gültigkeit des Turing Tests ist umstrittener denn  je. Er wurde eingeführt, als die Computerwissenschaft noch in ihren jungen Jahren war. Ob dieser denn in unserer heutigen Welt der KI noch zu gebrauchen sei. So habe Turing gar das Denken von Maschinen \enquote{im menschlichen Sinne} ausgeschlossen, sondern nur die Möglichkeit einer Maschine ein Gespräch zu führen beschrieben.\footnote{Selzer 2011: 3} \\
+Die allgemeine Gültigkeit des Turing Tests ist umstrittener denn  je. Er wurde eingeführt, als die Computerwissenschaft noch in ihren jungen Jahren war. Ist dieser in unserer heutigen Welt der KI noch zu gebrauchen? So habe Turing gar das Denken von Maschinen \enquote{im menschlichen Sinne} ausgeschlossen, sondern nur die Möglichkeit einer Maschine ein Gespräch zu führen beschrieben.\footnote{Selzer 2011: 3} \\
 So war seine Aussage nie eine wissenschaftliche These sondern nur eine subjektive Aussage.
 
 \subsubsection{Die chinesische Box}
-Zwar scheint die Art wie Programme lernen Wittgensteins Sprachphilosophie zu reflektieren, doch schlussendlich werden all diese Beispiele auf eine Logik hinunter gebrochen, sonst könne ein Computer diese gar nicht speichern und ausführen. Wenn wir uns zurück zur Turing-Maschine entsinnen, so sieht man, dass alles was ein Computer tut, irgendwann als einfache Speichermanipulation dasteht. So gibt es eine Speichermanipulation die z.B. genau mit dem Ausdruck \enquote{Was ist die Definition von Ehre?} übereinstimmt. Ist es also doch möglich die menschliche Sprache in simple Axiome hinunterzubrechen? \\
+Zwar scheint die Art wie Programme lernen Wittgensteins Sprachphilosophie zu reflektieren, doch schlussendlich werden all diese Beispiele auf eine Logik hinunter gebrochen, sonst könnte ein Computer diese gar nicht speichern und ausführen. Wenn wir uns zurück zur Turing-Maschine entsinnen, so sieht man, dass alles was ein Computer tut, irgendwann als einfache Speichermanipulation dasteht. So gibt es eine Speichermanipulation die z.B. genau mit dem Ausdruck \enquote{Was ist die Definition von Ehre?} übereinstimmt. Ist es also doch möglich die menschliche Sprache in simple Axiome hinunterzubrechen? \\
 Man stelle sich eine kleine Box mit einem Menschen vor. Dieser erhält von Wissenschaftlern von aussen zwei Blätter Papier. Auf dem ersten stehen mehrere Fragen auf chinesisch (Input). Die Person kann hierbei kein chinesisch und ist somit nicht in der Lage die Fragen zu beantworten. Auf dem zweiten Papier steht eine Anleitung: So hat die Person für jede Kombination an Schriftzeichen eine genaue Antwort, die sie geben soll.\footnote{Searle 1980: 3, leicht abgeändert} Nennen wir dieses Blatt Papier \enquote{den Compiler für Chinesisch}. Mit der Anleitung schreibt die Person ihre Antworten auf ein separates Blatt Papier und reicht dieses zurück nach aussen (Output). Die Wissenschaftler wären begeistert, so sind sie sich sicher, dass die Person in der Box Chinesisch kann. So seien die Antworten verglichen mit muttersprachigen Chinesen nicht zu unterscheiden. \\
 Die Grundauffassung Vieler ist nun, dass die Person in der Box einfach nur die Schriftzeichen auf der Anleitung kopiert, aber gar kein Verständnis für die Sprache hat. Diese Antwort ändert sich nicht, egal wie komplex die Anleitung ist und für wie viele spezifische Fälle eingeplant worden ist. Also gibt es, solange man diesem Gedankenexperiment folgt, keinen \enquote{Compiler für Chinesisch} so ist jedes Folgen strikter Logik kein wirkliches Verstehen. Wittgenstein behält zwar Recht, aber die derzeitigen Programme (Cleverbot und GPT-2) \enquote{verstehen} natürliche Sprachen im menschlichen Sinne gar nicht. Zerfällt hier nicht der Vergleich zwischen natürlicher Sprache und Programmiersprache, so ist eine Programmiersprache immer durch ein Compiler also ein striktes Folgen von logischen Schritten definiert?
 
@@ -298,16 +307,16 @@ Die Frage wie und ob Menschen überhaupt denken ist eine umstrittene in der Phil
 \enquote{What it is to be in a certain state of mind is to be disposed to behave in
 a certain way.}\footnote{Stout 2006: 3} \footnote{Deutsche Übersetzung: Einen gewissen Gemütszustand zu verspüren ist nichts anderes, als auf eine gewisse Weise zu handeln.} \footnote{Es gibt verschiedene Versionen des Behaviorismus, genau wie es verschiedene Arten des Skeptizismus gibt. Ich beziehe mich hier auf eine neuere akademische Version (siehe Quelle).}
 \end{displayquote}
-Vertreter von Behaviorismus denken also, dass Gemütszustände auf gar keine andere Weise existieren, als was sie den Organismus dazu bringen zu tun.\footnote{Stout 2006: 3} Das bedeutet aber nicht, dass Behavioristen innere Vorgänge vollkommen abstreiten. So stimmen sie zu, dass ein Mensch durch die inneren chemischen Reaktionen zwischen Neuronen gesteuert wird. \footnote{Stout 2006: 4}\\
+Vertreter von Behaviorismus denken also, dass Gemütszustände auf gar keine andere Weise existieren, als was sie den Organismus dazu bringen, zu tun.\footnote{Stout 2006: 3} Das bedeutet aber nicht, dass Behavioristen innere Vorgänge vollkommen abstreiten. So stimmen sie zu, dass ein Mensch durch die inneren chemischen Reaktionen zwischen Neuronen gesteuert wird. \footnote{Stout 2006: 4}\\
 Würde man aber einen Roboter R bauen, welcher exakt dieselbe Reaktion auf jeglichen Reiz wie Person P hat, so würde ein Behaviorist aussagen, dass Roboter R und Mensch P den exakt selben Gemütszustand besitzen. Der Fakt, dass Roboter R durch einen hochkomplexen Algorithmus und Person P durch ihr Hirn gesteuert wurden, wird also irrelevant.
 
 \subsubsection{Gegenüberstellung von Behaviorismus und der chinesischen Box}
-Bezieht man einen behavioristischen Blickwinkel auf das Gedankenexperiment auf die chinesische Box, verändern sich gewisse Dinge fundamental. Wir stellen zwei chinesische Boxen nebeneinander: Eine davon enthält einen Muttersprachler M, in der anderen befindet sich K, der kein Chinesisch versteht. Beiden werden die gleichen Fragen auf Chinesisch gestellt. So geben beide auf jegliche mögliche Frage die exakt selbe Antwort. Für den Behavioristen würde es keine Rolle spielen, dass Person M die chinesische Sprache M versteht, während K nur einer Anleitung folgt. Beide Boxen hätten denselben Gemütszustand. \\
+Bezieht man einen behavioristischen Blickwinkel auf das Gedankenexperiment der chinesischen Box, verändern sich gewisse Dinge fundamental. Wir stellen zwei chinesische Boxen nebeneinander: Eine davon enthält einen Muttersprachler M, in der anderen befindet sich K, der kein Chinesisch versteht. Beiden werden die gleichen Fragen auf Chinesisch gestellt. So geben beide auf jegliche mögliche Frage die exakt selbe Antwort. Für den Behavioristen würde es keine Rolle spielen, dass Person M die chinesische Sprache versteht, während K nur einer Anleitung folgt. Beide Boxen hätten denselben Gemütszustand. \\
 Das ist durchaus mit dem Motto von \enquote{Gebrauch ist Bedeutung} zu vereinbaren, schliesslich kümmert sich der Gebrauch nicht um innere Vorgänge.
 
 \subsubsection{Regeln für das Gehirn}
-Man kann das Hirn eines Muttersprachlers selbst als eine chinesische Box sehen. Die \enquote{Fragen}, die man dem Gehirn stellt, wären dabei einfach die verschiedenen Reize aus der Umwelt. Und die \enquote{Antworten} des Hirnes sind die verschiedenen Nervensignale, welches an die Muskeln im Körper sendet. In diesem Gehirn muss sich irgendwo das Sprachverständnis für Chinesisch verstecken. \\
-Ein Behaviorist würde sagen, dass es in dem Hirn eine gewisse Anordnung von Teilchen gibt, welche auf das Hören einer Frage eine physikalische Reaktion auslöst, deren Endeffekt die Antwort auf die Frage ist. Diese Anordnung von Teilchen kann man funktional als den \enquote{Compiler für Chinesisch} verstehen. Also ist das Herunterbrechen der natürlichen Sprache in Grundregeln doch möglich, denn muss ihr Zustand ja irgendwie in dieser Anordnung von Teilchen gespeichert sein.
+Man kann das Hirn eines Muttersprachlers selbst als eine chinesische Box sehen. Die \enquote{Fragen}, die man dem Gehirn stellt, wären dabei einfach die verschiedenen Reize aus der Umwelt. Und die \enquote{Antworten} des Hirnes sind die verschiedenen Nervensignale, welche es an die Muskeln im Körper sendet. In diesem Gehirn muss sich irgendwo das Sprachverständnis für Chinesisch verstecken. \\
+Ein Behaviorist würde sagen, dass es in dem Hirn eine gewisse Anordnung von Teilchen gibt, welche auf das Hören einer Frage eine physikalische Reaktion auslöst, deren Endeffekt die Antwort auf die Frage ist. Diese Anordnung von Teilchen kann man funktional als den \enquote{Compiler für Chinesisch} verstehen. Also ist das Herunterbrechen der natürlichen Sprache in Grundregeln doch möglich, denn ihr Zustand muss ja irgendwie in dieser Anordnung von Teilchen gespeichert sein.
 
 \subsection{Der Weg aus dem Fliegenglas}
 Für Gewisse mag der Behaviorismus unzureichend sein. Wittgenstein selbst stimmt der Grundannahme in 6.3.1 nicht zu.\footnote{Wittgenstein 1953: §304} Aber was ist dann die Eigenschaft, die das \enquote{Verständnis} einer Sprache ausmacht? \\
